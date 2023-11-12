@@ -1,0 +1,37 @@
+{
+  "rescued": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-allstarbackend-rescued-223335-authRole",
+      "UnauthRoleArn": "arn:aws:iam::986453273135:role/amplify-allstarbackend-rescued-223335-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::986453273135:role/amplify-allstarbackend-rescued-223335-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-allstarbackend-rescued-223335-deployment",
+      "UnauthRoleName": "amplify-allstarbackend-rescued-223335-unauthRole",
+      "StackName": "amplify-allstarbackend-rescued-223335",
+      "StackId": "arn:aws:cloudformation:eu-central-1:986453273135:stack/amplify-allstarbackend-rescued-223335/4ef99010-3a10-11ee-a42b-0aa7c33ef562",
+      "AmplifyAppId": "d22h1kgc6xq1y7"
+    },
+    "categories": {
+      "auth": {
+        "allstarbackend8d95237b": {
+          "appleAppId": "AllStarsApp",
+          "googleClientId": "30r3gvfj73a0vlhm2edqqjmon7"
+        },
+        "userPoolGroups": {}
+      },
+      "function": {
+        "AdminQueriesc733e6d3": {
+          "deploymentBucketName": "amplify-allstarbackend-rescued-223335-deployment",
+          "s3Key": "amplify-builds/AdminQueriesc733e6d3-366949546c42754f4d75-build.zip"
+        }
+      },
+      "storage": {
+        "s3allstarbackendstorage701b3da8": {}
+      },
+      "api": {
+        "AdminQueries": {},
+        "allstarbackend": {}
+      }
+    }
+  }
+}
