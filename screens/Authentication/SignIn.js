@@ -39,6 +39,10 @@ const SignIn = ({ navigation }) => {
         Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google });
     }
 
+    function onLoginWithApplePressed() {
+        console.log("Apple Sigin is Clicked");
+        Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Apple });
+    }
 
     function isEnableSignIn() {
         return email != "" && password != "" && emailError == ""
@@ -214,7 +218,7 @@ const SignIn = ({ navigation }) => {
                         color: COLORS.black
                     }}
                     //onPress={() => navigation.replace("Home")}
-                    onPress={onLoginWithGooglePressed}
+                    onPress={onLoginWithApplePressed}
                 />
 
                 <SocialButton

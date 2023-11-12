@@ -60,7 +60,7 @@ const UserBoardingTrainingTypes = ({ route, navigation }) => {
         await utils.saveUser({ selectedAge, selectedFHeight, selectedFWeight, selectedGenre, selectedGoal });
       else
         await utils.saveEmptyUser({ selectedAge, selectedFHeight, selectedFWeight, selectedGenre, selectedGoal });
-        //navigation.replace('MainScreen');
+        navigation.replace('MainScreen');
     } catch (error) {
       console.log(error);
       //navigation.replace("Home");

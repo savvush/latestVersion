@@ -162,13 +162,14 @@ async function saveUser(userInput) {
             })
         )
 
+        /*
         console.log("1111111112"+ selectedAge);
         const currentUser = await Auth.currentAuthenticatedUser();
         await Auth.updateUserAttributes(currentUser , {
           'custom:gender':  ""+selectedGenre,
           'custom:age' : ""+selectedAge
         });
-
+        */
 
         console.log(user);
 
