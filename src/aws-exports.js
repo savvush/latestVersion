@@ -16,8 +16,20 @@ const awsmobile = {
     "aws_cognito_identity_pool_id": "eu-central-1:f0ede6e4-328d-46df-97e7-cb792dff0f65",
     "aws_cognito_region": "eu-central-1",
     "aws_user_pools_id": "eu-central-1_nUGZ9jWgt",
-    "aws_user_pools_web_client_id": "76k3sdi2qj8mqflem2k5sd6508",
-    "oauth": {},
+    "aws_user_pools_web_client_id": "2f9s223gdsv9qnq8a8qd2jpn52",
+    "oauth": {
+        "domain": "ptapp.auth.eu-central-1.amazoncognito.com",
+        "scope": [
+            "email",
+            "openid",
+            "profile",
+            "phone",
+            "aws.cognito.signin.user.admin"
+        ],
+        "redirectSignIn": "AllStarsApp://",
+        "redirectSignOut": "AllStarsApp://",
+        "responseType": "code"
+    },
     "federationTarget": "COGNITO_IDENTITY_POOLS",
     "aws_cognito_username_attributes": [
         "EMAIL"

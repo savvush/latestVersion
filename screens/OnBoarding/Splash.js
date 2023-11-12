@@ -12,6 +12,8 @@ import { useGlobalState, useGlobalDispatch } from '../../globals/GlobalProvider'
 export function Splash({ route, navigation }) {
     const user = useRef(null);
 
+    const internalState = useRef(true);
+
     const globalState = useGlobalState();
     const globalDispatch = useGlobalDispatch();
    
@@ -39,6 +41,13 @@ export function Splash({ route, navigation }) {
                         user: JSON.stringify(userData),
                         screenName: 'MainScreen'
                     }
+                } else {
+                    console.log("userData seems to be null -> onboard him/her");
+                    dispatchObject = {
+                        type: 'signedIn',
+                        user: user.current,
+                        screenName: 'UserBoardingAgeSex'
+                    };
                 }
         
             } catch (e) {
@@ -59,6 +68,11 @@ export function Splash({ route, navigation }) {
 
         ////////////  go baby  //////////
         globalDispatch(dispatchObject);
+
+        if (dispatchObject.type != 'splash') {
+            console.log("Manual override of the navigation from Splash to: " + dispatchObject.screenName);
+            navigation.replace(dispatchObject.screenName);
+        }
         /////////////////////////////////
     };
 
@@ -66,12 +80,12 @@ export function Splash({ route, navigation }) {
     function authListener(data) {
          const eventType = data.payload.event;
          console.log("AuthEventType: " + eventType);
-
          if (eventType == 'signOut') {
             user.current == null;
             globalDispatch({type: 'splash'});
-         } else if (eventType == 'signIn' || eventType == 'cognitoHostedUI') {
+         } else if ((eventType == 'signIn' || eventType == 'cognitoHostedUI') &&  internalState.current){ 
             checkAuthStatus();
+            internalState.current = false;
          }
     }
 
