@@ -1,0 +1,15 @@
+projects:
+  allstarbackend-rescued:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - src/graphql/**/*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src/graphql
+        region: eu-central-1
+        apiId: mtghai6iqbgezoo2qng5hv42j4
+        maxDepth: 2

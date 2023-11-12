@@ -1,0 +1,261 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-allstarbackend-rescued-223335-authRole",
+            "UnauthRoleArn": "arn:aws:iam::986453273135:role/amplify-allstarbackend-rescued-223335-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::986453273135:role/amplify-allstarbackend-rescued-223335-authRole",
+            "Region": "eu-central-1",
+            "DeploymentBucketName": "amplify-allstarbackend-rescued-223335-deployment",
+            "UnauthRoleName": "amplify-allstarbackend-rescued-223335-unauthRole",
+            "StackName": "amplify-allstarbackend-rescued-223335",
+            "StackId": "arn:aws:cloudformation:eu-central-1:986453273135:stack/amplify-allstarbackend-rescued-223335/4ef99010-3a10-11ee-a42b-0aa7c33ef562",
+            "AmplifyAppId": "d22h1kgc6xq1y7"
+        }
+    },
+    "api": {
+        "AdminQueries": {
+            "authorizationType": "AMAZON_COGNITO_USER_POOLS",
+            "dependsOn": [
+                {
+                    "attributes": [
+                        "UserPoolId"
+                    ],
+                    "category": "auth",
+                    "resourceName": "allstarbackend8d95237b"
+                },
+                {
+                    "attributes": [
+                        "Arn",
+                        "Name"
+                    ],
+                    "category": "function",
+                    "resourceName": "AdminQueriesc733e6d3"
+                }
+            ],
+            "providerPlugin": "awscloudformation",
+            "service": "API Gateway",
+            "output": {
+                "ApiName": "AdminQueries",
+                "RootUrl": "https://kb2uwnq6tj.execute-api.eu-central-1.amazonaws.com/rescued",
+                "ApiId": "kb2uwnq6tj"
+            },
+            "lastPushTimeStamp": "2023-11-12T19:15:41.787Z",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-allstarbackend-rescued-223335-deployment/amplify-cfn-templates/api/AdminQueries-cloudformation-template.json",
+                "logicalId": "apiAdminQueries"
+            }
+        },
+        "allstarbackend": {
+            "dependsOn": [
+                {
+                    "attributes": [
+                        "UserPoolId"
+                    ],
+                    "category": "auth",
+                    "resourceName": "allstarbackend8d95237b"
+                }
+            ],
+            "output": {
+                "authConfig": {
+                    "additionalAuthenticationProviders": [
+                        {
+                            "authenticationType": "AWS_IAM"
+                        }
+                    ],
+                    "defaultAuthentication": {
+                        "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+                        "userPoolConfig": {
+                            "userPoolId": "authallstarbackend8d95237b"
+                        }
+                    }
+                },
+                "GraphQLAPIIdOutput": "mtghai6iqbgezoo2qng5hv42j4",
+                "GraphQLAPIEndpointOutput": "https://ionwvh7ifbhatfax4rcaz27uzu.appsync-api.eu-central-1.amazonaws.com/graphql"
+            },
+            "providerPlugin": "awscloudformation",
+            "service": "AppSync",
+            "lastPushTimeStamp": "2023-11-12T19:25:33.722Z",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-allstarbackend-rescued-223335-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+                "logicalId": "apiallstarbackend"
+            },
+            "lastPushDirHash": "Gjr1qoMq+qr6ChzpSlOgqbgA9NQ="
+        },
+        "allstarbackend-rescued": {
+            "service": "AppSync",
+            "output": {
+                "authConfig": {
+                    "defaultAuthentication": {
+                        "authenticationType": "AWS_IAM"
+                    },
+                    "additionalAuthenticationProviders": [
+                        {
+                            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+                            "userPoolConfig": {
+                                "userPoolId": "eu-central-1_nUGZ9jWgt",
+                                "awsRegion": "eu-central-1",
+                                "appIdClientRegex": null
+                            }
+                        },
+                        {
+                            "authenticationType": "OPENID_CONNECT",
+                            "openIDConnectConfig": {
+                                "issuer": "https://ptapp.auth.eu-central-1.amazoncognito.com",
+                                "clientId": "2f9s223gdsv9qnq8a8qd2jpn52",
+                                "iatTTL": 0,
+                                "authTTL": 1000000
+                            }
+                        }
+                    ]
+                },
+                "GraphQLAPIIdOutput": "mtghai6iqbgezoo2qng5hv42j4",
+                "GraphQLAPIEndpointOutput": "https://ionwvh7ifbhatfax4rcaz27uzu.appsync-api.eu-central-1.amazonaws.com/graphql",
+                "name": "allstarbackend-rescued",
+                "region": "eu-central-1"
+            },
+            "lastPushTimeStamp": "2023-11-12T20:02:17.527Z"
+        }
+    },
+    "auth": {
+        "allstarbackend8d95237b": {
+            "customAuth": false,
+            "dependsOn": [],
+            "frontendAuthConfig": {
+                "mfaConfiguration": "OFF",
+                "mfaTypes": [
+                    "SMS"
+                ],
+                "passwordProtectionSettings": {
+                    "passwordPolicyMinLength": 8,
+                    "passwordPolicyCharacters": [
+                        "REQUIRES_LOWERCASE",
+                        "REQUIRES_UPPERCASE"
+                    ]
+                },
+                "signupAttributes": [
+                    "EMAIL"
+                ],
+                "socialProviders": [],
+                "usernameAttributes": [
+                    "EMAIL"
+                ],
+                "verificationMechanisms": [
+                    "EMAIL"
+                ]
+            },
+            "providerPlugin": "awscloudformation",
+            "service": "Cognito",
+            "output": {
+                "GoogleWebClient": "30r3gvfj73a0vlhm2edqqjmon7",
+                "UserPoolId": "eu-central-1_nUGZ9jWgt",
+                "AppClientIDWeb": "76k3sdi2qj8mqflem2k5sd6508",
+                "AppClientID": "750ifs0e5vdt21s3lhhetskpf9",
+                "AppleWebClient": "AllStarsApp",
+                "IdentityPoolId": "eu-central-1:f0ede6e4-328d-46df-97e7-cb792dff0f65",
+                "UserPoolArn": "arn:aws:cognito-idp:eu-central-1:986453273135:userpool/eu-central-1_nUGZ9jWgt",
+                "IdentityPoolName": "allstarbackend8d95237b_identitypool_8d95237b__rescued",
+                "UserPoolName": "allstarbackend8d95237b_userpool_8d95237b"
+            },
+            "lastPushTimeStamp": "2023-11-12T19:15:41.792Z",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-allstarbackend-rescued-223335-deployment/amplify-cfn-templates/auth/allstarbackend8d95237b-cloudformation-template.json",
+                "logicalId": "authallstarbackend8d95237b"
+            }
+        },
+        "userPoolGroups": {
+            "dependsOn": [
+                {
+                    "category": "auth",
+                    "resourceName": "allstarbackend8d95237b",
+                    "attributes": [
+                        "UserPoolId",
+                        "AppClientIDWeb",
+                        "AppClientID",
+                        "IdentityPoolId"
+                    ]
+                }
+            ],
+            "providerPlugin": "awscloudformation",
+            "service": "Cognito-UserPool-Groups",
+            "output": {
+                "UsersGroupRole": "arn:aws:iam::986453273135:role/eu-central-1_nUGZ9jWgt-UsersGroupRole",
+                "AdminsGroupRole": "arn:aws:iam::986453273135:role/eu-central-1_nUGZ9jWgt-AdminsGroupRole"
+            },
+            "lastPushTimeStamp": "2023-11-12T19:15:52.328Z",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-allstarbackend-rescued-223335-deployment/amplify-cfn-templates/auth/userPoolGroups-cloudformation-template.json",
+                "logicalId": "authuserPoolGroups"
+            }
+        }
+    },
+    "function": {
+        "AdminQueriesc733e6d3": {
+            "build": true,
+            "dependsOn": [
+                {
+                    "attributes": [
+                        "UserPoolId"
+                    ],
+                    "category": "auth",
+                    "resourceName": "allstarbackend8d95237b"
+                }
+            ],
+            "providerPlugin": "awscloudformation",
+            "service": "Lambda",
+            "output": {
+                "LambdaExecutionRoleArn": "arn:aws:iam::986453273135:role/AdminQueriesc733e6d3LambdaRole-rescued",
+                "Region": "eu-central-1",
+                "Arn": "arn:aws:lambda:eu-central-1:986453273135:function:AdminQueriesc733e6d3-rescued",
+                "Name": "AdminQueriesc733e6d3-rescued",
+                "LambdaExecutionRole": "AdminQueriesc733e6d3LambdaRole-rescued"
+            },
+            "lastPushTimeStamp": "2023-11-12T19:15:41.794Z",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-allstarbackend-rescued-223335-deployment/amplify-cfn-templates/function/AdminQueriesc733e6d3-cloudformation-template.json",
+                "logicalId": "functionAdminQueriesc733e6d3"
+            },
+            "s3Bucket": {
+                "deploymentBucketName": "amplify-allstarbackend-rescued-223335-deployment",
+                "s3Key": "amplify-builds/AdminQueriesc733e6d3-366949546c42754f4d75-build.zip"
+            }
+        }
+    },
+    "storage": {
+        "s3allstarbackendstorage701b3da8": {
+            "dependsOn": [
+                {
+                    "category": "auth",
+                    "resourceName": "allstarbackend8d95237b",
+                    "attributes": [
+                        "UserPoolId"
+                    ]
+                },
+                {
+                    "category": "auth",
+                    "resourceName": "userPoolGroups",
+                    "attributes": [
+                        "AdminsGroupRole"
+                    ]
+                },
+                {
+                    "category": "auth",
+                    "resourceName": "userPoolGroups",
+                    "attributes": [
+                        "UsersGroupRole"
+                    ]
+                }
+            ],
+            "providerPlugin": "awscloudformation",
+            "service": "S3",
+            "output": {
+                "BucketName": "allstar-backend-storage-701b3da8223335-rescued",
+                "Region": "eu-central-1"
+            },
+            "lastPushTimeStamp": "2023-11-12T19:15:52.654Z",
+            "providerMetadata": {
+                "s3TemplateURL": "https://s3.amazonaws.com/amplify-allstarbackend-rescued-223335-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+                "logicalId": "storages3allstarbackendstorage701b3da8"
+            }
+        }
+    }
+}

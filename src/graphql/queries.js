@@ -1,6 +1,46 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const getDietDayFoodPlan = /* GraphQL */ `
+  query GetDietDayFoodPlan($id: ID!) {
+    getDietDayFoodPlan(id: $id) {
+      id
+      time
+      target
+      content
+      dietdaydetailsID
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const listDietDayFoodPlans = /* GraphQL */ `
+  query ListDietDayFoodPlans(
+    $filter: ModelDietDayFoodPlanFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listDietDayFoodPlans(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        time
+        target
+        content
+        dietdaydetailsID
+        createdAt
+        updatedAt
+        __typename
+      }
+      nextToken
+      __typename
+    }
+  }
+`;
 export const getVideo = /* GraphQL */ `
   query GetVideo($id: ID!) {
     getVideo(id: $id) {
@@ -9,26 +49,14 @@ export const getVideo = /* GraphQL */ `
       description
       duration
       Exercises {
-        items {
-          id
-          videoID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       VideoUrl
       thumbnailUrl
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -44,55 +72,14 @@ export const listVideos = /* GraphQL */ `
         title
         description
         duration
-        Exercises {
-          nextToken
-          startedAt
-        }
         VideoUrl
         thumbnailUrl
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncVideos = /* GraphQL */ `
-  query SyncVideos(
-    $filter: ModelVideoFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncVideos(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        title
-        description
-        duration
-        Exercises {
-          nextToken
-          startedAt
-        }
-        VideoUrl
-        thumbnailUrl
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -106,12 +93,57 @@ export const getDietDayDetails = /* GraphQL */ `
       protein
       quarge
       recipe
+      strMealThumb
+      strTags
+      strYoutube
+      strIngredient1
+      strIngredient2
+      strIngredient3
+      strIngredient4
+      strIngredient5
+      strIngredient6
+      strIngredient7
+      strIngredient8
+      strIngredient9
+      strIngredient10
+      strIngredient11
+      strIngredient12
+      strIngredient13
+      strIngredient14
+      strIngredient15
+      strIngredient16
+      strIngredient17
+      strIngredient18
+      strIngredient19
+      strIngredient20
+      strMeasure1
+      strMeasure2
+      strMeasure3
+      strMeasure4
+      strMeasure5
+      strMeasure6
+      strMeasure7
+      strMeasure8
+      strMeasure9
+      strMeasure10
+      strMeasure11
+      strMeasure12
+      strMeasure13
+      strMeasure14
+      strMeasure15
+      strMeasure16
+      strMeasure17
+      strMeasure18
+      strMeasure19
+      strMeasure20
       dietdaysID
+      DietDayFoodPlans {
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -130,48 +162,56 @@ export const listDietDayDetails = /* GraphQL */ `
         protein
         quarge
         recipe
+        strMealThumb
+        strTags
+        strYoutube
+        strIngredient1
+        strIngredient2
+        strIngredient3
+        strIngredient4
+        strIngredient5
+        strIngredient6
+        strIngredient7
+        strIngredient8
+        strIngredient9
+        strIngredient10
+        strIngredient11
+        strIngredient12
+        strIngredient13
+        strIngredient14
+        strIngredient15
+        strIngredient16
+        strIngredient17
+        strIngredient18
+        strIngredient19
+        strIngredient20
+        strMeasure1
+        strMeasure2
+        strMeasure3
+        strMeasure4
+        strMeasure5
+        strMeasure6
+        strMeasure7
+        strMeasure8
+        strMeasure9
+        strMeasure10
+        strMeasure11
+        strMeasure12
+        strMeasure13
+        strMeasure14
+        strMeasure15
+        strMeasure16
+        strMeasure17
+        strMeasure18
+        strMeasure19
+        strMeasure20
         dietdaysID
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncDietDayDetails = /* GraphQL */ `
-  query SyncDietDayDetails(
-    $filter: ModelDietDayDetailsFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncDietDayDetails(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        time
-        goal
-        content
-        protein
-        quarge
-        recipe
-        dietdaysID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -182,31 +222,14 @@ export const getDietDays = /* GraphQL */ `
       day
       title
       DietDayDetails {
-        items {
-          id
-          time
-          goal
-          content
-          protein
-          quarge
-          recipe
-          dietdaysID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       description
       dietrecipeID
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -221,54 +244,14 @@ export const listDietDays = /* GraphQL */ `
         id
         day
         title
-        DietDayDetails {
-          nextToken
-          startedAt
-        }
         description
         dietrecipeID
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncDietDays = /* GraphQL */ `
-  query SyncDietDays(
-    $filter: ModelDietDaysFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncDietDays(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        day
-        title
-        DietDayDetails {
-          nextToken
-          startedAt
-        }
-        description
-        dietrecipeID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -287,26 +270,19 @@ export const getDietRecipeProgress = /* GraphQL */ `
         description
         imageUrl
         onboardingImageUrl
+        isstarted
         backgroundColor
-        Diets {
-          nextToken
-          startedAt
-        }
         userID
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       userID
       isPaused
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       dietRecipeProgressDietRecipeId
+      __typename
     }
   }
 `;
@@ -326,81 +302,15 @@ export const listDietRecipeProgresses = /* GraphQL */ `
         startDate
         description
         comment
-        DietRecipe {
-          id
-          name
-          gender
-          recipeName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         userID
         isPaused
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         dietRecipeProgressDietRecipeId
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncDietRecipeProgresses = /* GraphQL */ `
-  query SyncDietRecipeProgresses(
-    $filter: ModelDietRecipeProgressFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncDietRecipeProgresses(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        startDate
-        description
-        comment
-        DietRecipe {
-          id
-          name
-          gender
-          recipeName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userID
-        isPaused
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        dietRecipeProgressDietRecipeId
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -414,29 +324,16 @@ export const getDietRecipe = /* GraphQL */ `
       description
       imageUrl
       onboardingImageUrl
+      isstarted
       backgroundColor
       Diets {
-        items {
-          id
-          day
-          title
-          description
-          dietrecipeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       userID
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -455,58 +352,15 @@ export const listDietRecipes = /* GraphQL */ `
         description
         imageUrl
         onboardingImageUrl
+        isstarted
         backgroundColor
-        Diets {
-          nextToken
-          startedAt
-        }
         userID
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncDietRecipes = /* GraphQL */ `
-  query SyncDietRecipes(
-    $filter: ModelDietRecipeFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncDietRecipes(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        name
-        gender
-        recipeName
-        description
-        imageUrl
-        onboardingImageUrl
-        backgroundColor
-        Diets {
-          nextToken
-          startedAt
-        }
-        userID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -522,80 +376,28 @@ export const getTrainingType = /* GraphQL */ `
       onboardingImageUrl
       backgroundColor
       exercises {
-        items {
-          id
-          trainingTypeID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       users {
-        items {
-          id
-          trainingTypeID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          trainingTypeID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       programs {
-        items {
-          id
-          trainingTypeID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          trainingTypeID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -615,87 +417,12 @@ export const listTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncTrainingTypes = /* GraphQL */ `
-  query SyncTrainingTypes(
-    $filter: ModelTrainingTypeFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncTrainingTypes(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        name
-        gender
-        menuName
-        description
-        imageUrl
-        onboardingImageUrl
-        backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -708,80 +435,28 @@ export const getMuscleGroup = /* GraphQL */ `
       specialBackgroundColor
       imageUrl
       exercises {
-        items {
-          id
-          muscleGroupID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       users {
-        items {
-          id
-          muscleGroupID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          muscleGroupID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       programs {
-        items {
-          id
-          muscleGroupID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          muscleGroupID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -798,84 +473,12 @@ export const listMuscleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncMuscleGroups = /* GraphQL */ `
-  query SyncMuscleGroups(
-    $filter: ModelMuscleGroupFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncMuscleGroups(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        name
-        backgroundColor
-        specialBackgroundColor
-        imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -888,10 +491,8 @@ export const getOnboarding = /* GraphQL */ `
       isDisplay
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       owner
+      __typename
     }
   }
 `;
@@ -909,43 +510,11 @@ export const listOnboardings = /* GraphQL */ `
         isDisplay
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         owner
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncOnboardings = /* GraphQL */ `
-  query SyncOnboardings(
-    $filter: ModelOnboardingFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncOnboardings(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        imageUrl
-        description
-        isDisplay
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        owner
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -957,24 +526,12 @@ export const getEquipment = /* GraphQL */ `
       imageUrl
       backgroundColor
       exercises {
-        items {
-          id
-          equipmentID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -990,51 +547,12 @@ export const listEquipment = /* GraphQL */ `
         name
         imageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncEquipment = /* GraphQL */ `
-  query SyncEquipment(
-    $filter: ModelEquipmentFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncEquipment(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        name
-        imageUrl
-        backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -1056,158 +574,53 @@ export const getExercise = /* GraphQL */ `
       exerciseExtension2
       exerciseItem {
         id
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         sets
         workoutTime
         restTime
         order
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutExerciseItemsId
         challengeExerciseItemsId
         exerciseItemExerciseId
+        __typename
       }
       tags {
-        items {
-          id
-          exerciseID
-          tagID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       videos {
-        items {
-          id
-          videoID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          exerciseID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          exerciseID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingtypes {
-        items {
-          id
-          trainingTypeID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       musclegroups {
-        items {
-          id
-          muscleGroupID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       equipments {
-        items {
-          id
-          equipmentID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       coachs {
-        items {
-          id
-          exerciseID
-          coachID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       exerciseExerciseItemId
+      __typename
     }
   }
 `;
@@ -1232,148 +645,13 @@ export const listExercises = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncExercises = /* GraphQL */ `
-  query SyncExercises(
-    $filter: ModelExerciseFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncExercises(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        title
-        thumbnailUrl
-        imageUrl
-        oneCycleDuration
-        views
-        likes
-        dislikes
-        description
-        backgroundColor
-        level
-        exerciseExtension1
-        exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        exerciseExerciseItemId
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -1397,27 +675,9 @@ export const getPost = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       category
       title
@@ -1427,10 +687,8 @@ export const getPost = /* GraphQL */ `
       content
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       postUserId
+      __typename
     }
   }
 `;
@@ -1443,28 +701,6 @@ export const listPosts = /* GraphQL */ `
     listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         category
         title
         caption
@@ -1473,68 +709,11 @@ export const listPosts = /* GraphQL */ `
         content
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         postUserId
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncPosts = /* GraphQL */ `
-  query SyncPosts(
-    $filter: ModelPostFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncPosts(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        category
-        title
-        caption
-        readMinutes
-        image
-        content
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        postUserId
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -1559,79 +738,29 @@ export const getCoach = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       backgroundImageUrl
       presentationVideoUrl
       bio
       exercises {
-        items {
-          id
-          exerciseID
-          coachID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          coachID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          coachID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       coachUserId
+      __typename
     }
   }
 `;
@@ -1645,117 +774,16 @@ export const listCoaches = /* GraphQL */ `
       items {
         id
         username
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         backgroundImageUrl
         presentationVideoUrl
         bio
-        exercises {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         coachUserId
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncCoaches = /* GraphQL */ `
-  query SyncCoaches(
-    $filter: ModelCoachFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncCoaches(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        username
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        backgroundImageUrl
-        presentationVideoUrl
-        bio
-        exercises {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        coachUserId
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -1777,59 +805,10 @@ export const getExerciseItem = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       sets
       workoutTime
@@ -1837,12 +816,10 @@ export const getExerciseItem = /* GraphQL */ `
       order
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       workoutExerciseItemsId
       challengeExerciseItemsId
       exerciseItemExerciseId
+      __typename
     }
   }
 `;
@@ -1855,96 +832,19 @@ export const listExerciseItems = /* GraphQL */ `
     listExerciseItems(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         sets
         workoutTime
         restTime
         order
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutExerciseItemsId
         challengeExerciseItemsId
         exerciseItemExerciseId
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncExerciseItems = /* GraphQL */ `
-  query SyncExerciseItems(
-    $filter: ModelExerciseItemFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncExerciseItems(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        sets
-        workoutTime
-        restTime
-        order
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        workoutExerciseItemsId
-        challengeExerciseItemsId
-        exerciseItemExerciseId
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -1968,27 +868,9 @@ export const getNewsShownToUser = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       news {
         id
@@ -2003,17 +885,13 @@ export const getNewsShownToUser = /* GraphQL */ `
         contentHtml
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       newsShownToUserUserId
       newsShownToUserNewsId
+      __typename
     }
   }
 `;
@@ -2030,122 +908,14 @@ export const listNewsShownToUsers = /* GraphQL */ `
     ) {
       items {
         id
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        news {
-          id
-          type
-          title
-          description
-          videoUrl
-          groupID
-          headerText
-          bannerImageUrl
-          imageUrl
-          contentHtml
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         newsShownToUserUserId
         newsShownToUserNewsId
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncNewsShownToUsers = /* GraphQL */ `
-  query SyncNewsShownToUsers(
-    $filter: ModelNewsShownToUserFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncNewsShownToUsers(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        news {
-          id
-          type
-          title
-          description
-          videoUrl
-          groupID
-          headerText
-          bannerImageUrl
-          imageUrl
-          contentHtml
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        newsShownToUserUserId
-        newsShownToUserNewsId
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -2168,76 +938,24 @@ export const getUser = /* GraphQL */ `
       age
       userType
       goalTrainingTypes {
-        items {
-          id
-          trainingTypeID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       goalMuscleGroups {
-        items {
-          id
-          muscleGroupID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       recipes {
-        items {
-          id
-          name
-          gender
-          recipeName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       DietRecipeProgresses {
-        items {
-          id
-          startDate
-          description
-          comment
-          userID
-          isPaused
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          dietRecipeProgressDietRecipeId
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -2264,86 +982,12 @@ export const listUsers = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncUsers = /* GraphQL */ `
-  query SyncUsers(
-    $filter: ModelUserFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncUsers(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        username
-        givenName
-        displayName
-        surname
-        gender
-        mail
-        mobile
-        weight
-        height
-        backgroundColor
-        specialBackgroundColor
-        imageUrl
-        age
-        userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -2362,9 +1006,7 @@ export const getNews = /* GraphQL */ `
       contentHtml
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -2388,47 +1030,10 @@ export const listNews = /* GraphQL */ `
         contentHtml
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncNews = /* GraphQL */ `
-  query SyncNews(
-    $filter: ModelNewsFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncNews(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        type
-        title
-        description
-        videoUrl
-        groupID
-        headerText
-        bannerImageUrl
-        imageUrl
-        contentHtml
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -2444,52 +1049,20 @@ export const getProgram = /* GraphQL */ `
       duration
       level
       workouts {
-        items {
-          id
-          programID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       muscleGroups {
-        items {
-          id
-          muscleGroupID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingTypes {
-        items {
-          id
-          trainingTypeID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -2509,71 +1082,12 @@ export const listPrograms = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncPrograms = /* GraphQL */ `
-  query SyncPrograms(
-    $filter: ModelProgramFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncPrograms(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        name
-        imageUrl
-        homepageImageUrl
-        backgroundColor
-        description
-        duration
-        level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -2594,109 +1108,32 @@ export const getWorkout = /* GraphQL */ `
       equipment
       calories
       muscleGroups {
-        items {
-          id
-          muscleGroupID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingTypes {
-        items {
-          id
-          trainingTypeID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       programs {
-        items {
-          id
-          programID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          workoutID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       exerciseItems {
-        items {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
         nextToken
-        startedAt
+        __typename
       }
       exercises {
-        items {
-          id
-          exerciseID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       properties {
-        items {
-          id
-          langu
-          text
-          icon
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutPropertiesId
-        }
         nextToken
-        startedAt
+        __typename
       }
       category {
         id
@@ -2706,29 +1143,13 @@ export const getWorkout = /* GraphQL */ `
         description
         backgroundColor
         isFavorite
-        workouts {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       authorCoach {
-        items {
-          id
-          coachID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       authorUser {
         id
@@ -2746,55 +1167,19 @@ export const getWorkout = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       userWorkoutProgress {
-        items {
-          id
-          userId
-          completedExercises
-          progress
-          isCompleted
-          workoutId
-          workoutName
-          workoutExerciseCount
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutUserWorkoutProgressId
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       categoryWorkoutsId
       workoutAuthorUserId
+      __typename
     }
   }
 `;
@@ -2819,200 +1204,14 @@ export const listWorkouts = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncWorkouts = /* GraphQL */ `
-  query SyncWorkouts(
-    $filter: ModelWorkoutFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncWorkouts(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        title
-        description
-        url
-        headerImage
-        backgroundColor
-        imageUrl
-        headerDescription
-        duration
-        numberofExercises
-        level
-        equipment
-        calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        categoryWorkoutsId
-        workoutAuthorUserId
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -3028,93 +1227,28 @@ export const getChallenge = /* GraphQL */ `
       duration
       level
       workouts {
-        items {
-          id
-          workoutID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       exerciseItems {
-        items {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
         nextToken
-        startedAt
+        __typename
       }
       exercises {
-        items {
-          id
-          exerciseID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       muscleGroups {
-        items {
-          id
-          muscleGroupID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingTypes {
-        items {
-          id
-          trainingTypeID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       authorCoach {
-        items {
-          id
-          coachID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       authorUser {
         id
@@ -3132,34 +1266,14 @@ export const getChallenge = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       challengeAuthorUserId
+      __typename
     }
   }
 `;
@@ -3179,141 +1293,13 @@ export const listChallenges = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncChallenges = /* GraphQL */ `
-  query SyncChallenges(
-    $filter: ModelChallengeFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncChallenges(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        name
-        imageUrl
-        homepageImageUrl
-        backgroundColor
-        description
-        duration
-        level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        challengeAuthorUserId
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -3326,10 +1312,8 @@ export const getWorkoutProperties = /* GraphQL */ `
       icon
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       workoutPropertiesId
+      __typename
     }
   }
 `;
@@ -3351,43 +1335,11 @@ export const listWorkoutProperties = /* GraphQL */ `
         icon
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutPropertiesId
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncWorkoutProperties = /* GraphQL */ `
-  query SyncWorkoutProperties(
-    $filter: ModelWorkoutPropertiesFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncWorkoutProperties(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        langu
-        text
-        icon
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        workoutPropertiesId
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -3409,85 +1361,11 @@ export const getUserWorkoutHistory = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       user {
         id
@@ -3505,27 +1383,9 @@ export const getUserWorkoutHistory = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       lastExercise {
         id
@@ -3541,108 +1401,34 @@ export const getUserWorkoutHistory = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       lastExerciseItem {
         id
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         sets
         workoutTime
         restTime
         order
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutExerciseItemsId
         challengeExerciseItemsId
         exerciseItemExerciseId
+        __typename
       }
       progress
       createdAt
       description
       exerciseCount
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       userWorkoutHistoryWorkoutId
       userWorkoutHistoryUserId
       userWorkoutHistoryLastExerciseId
       userWorkoutHistoryLastExerciseItemId
+      __typename
     }
   }
 `;
@@ -3659,214 +1445,19 @@ export const listUserWorkoutHistories = /* GraphQL */ `
     ) {
       items {
         id
-        workout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        lastExercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        lastExerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
         progress
         createdAt
         description
         exerciseCount
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         userWorkoutHistoryWorkoutId
         userWorkoutHistoryUserId
         userWorkoutHistoryLastExerciseId
         userWorkoutHistoryLastExerciseItemId
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncUserWorkoutHistories = /* GraphQL */ `
-  query SyncUserWorkoutHistories(
-    $filter: ModelUserWorkoutHistoryFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncUserWorkoutHistories(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        workout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        lastExercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        lastExerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        progress
-        createdAt
-        description
-        exerciseCount
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        userWorkoutHistoryWorkoutId
-        userWorkoutHistoryUserId
-        userWorkoutHistoryLastExerciseId
-        userWorkoutHistoryLastExerciseItemId
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -3883,58 +1474,10 @@ export const getUserChallengeHistory = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       user {
         id
@@ -3952,27 +1495,9 @@ export const getUserChallengeHistory = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       progress
       createdAt
@@ -3980,11 +1505,9 @@ export const getUserChallengeHistory = /* GraphQL */ `
       exerciseCount
       exerciseDuraionInSeconds
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       userChallengeHistoryChallengeId
       userChallengeHistoryUserId
+      __typename
     }
   }
 `;
@@ -4001,128 +1524,18 @@ export const listUserChallengeHistories = /* GraphQL */ `
     ) {
       items {
         id
-        challenge {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          challengeAuthorUserId
-        }
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         progress
         createdAt
         description
         exerciseCount
         exerciseDuraionInSeconds
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         userChallengeHistoryChallengeId
         userChallengeHistoryUserId
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncUserChallengeHistories = /* GraphQL */ `
-  query SyncUserChallengeHistories(
-    $filter: ModelUserChallengeHistoryFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncUserChallengeHistories(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        challenge {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          challengeAuthorUserId
-        }
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        progress
-        createdAt
-        description
-        exerciseCount
-        exerciseDuraionInSeconds
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        userChallengeHistoryChallengeId
-        userChallengeHistoryUserId
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -4146,27 +1559,9 @@ export const getUserProgramHistory = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       program {
         id
@@ -4177,23 +1572,9 @@ export const getUserProgramHistory = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       lastWorkout {
         id
@@ -4209,132 +1590,33 @@ export const getUserProgramHistory = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       lastExerciseItem {
         id
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         sets
         workoutTime
         restTime
         order
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutExerciseItemsId
         challengeExerciseItemsId
         exerciseItemExerciseId
+        __typename
       }
       progress
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       userProgramHistoryUserId
       userProgramHistoryProgramId
       userProgramHistoryLastWorkoutId
       userProgramHistoryLastExerciseItemId
+      __typename
     }
   }
 `;
@@ -4351,198 +1633,17 @@ export const listUserProgramHistories = /* GraphQL */ `
     ) {
       items {
         id
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        program {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        lastWorkout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
-        lastExerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
         progress
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         userProgramHistoryUserId
         userProgramHistoryProgramId
         userProgramHistoryLastWorkoutId
         userProgramHistoryLastExerciseItemId
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncUserProgramHistories = /* GraphQL */ `
-  query SyncUserProgramHistories(
-    $filter: ModelUserProgramHistoryFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncUserProgramHistories(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        program {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        lastWorkout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
-        lastExerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        progress
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        userProgramHistoryUserId
-        userProgramHistoryProgramId
-        userProgramHistoryLastWorkoutId
-        userProgramHistoryLastExerciseItemId
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -4557,36 +1658,12 @@ export const getCategory = /* GraphQL */ `
       backgroundColor
       isFavorite
       workouts {
-        items {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -4605,54 +1682,12 @@ export const listCategories = /* GraphQL */ `
         description
         backgroundColor
         isFavorite
-        workouts {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncCategories = /* GraphQL */ `
-  query SyncCategories(
-    $filter: ModelCategoryFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncCategories(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        name
-        imageUrl
-        headerImageUrl
-        description
-        backgroundColor
-        isFavorite
-        workouts {
-          nextToken
-          startedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -4671,9 +1706,7 @@ export const getBlog = /* GraphQL */ `
       isFavorite
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -4697,47 +1730,10 @@ export const listBlogs = /* GraphQL */ `
         isFavorite
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncBlogs = /* GraphQL */ `
-  query SyncBlogs(
-    $filter: ModelBlogFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncBlogs(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        name
-        title
-        subtitle
-        imageUrl
-        headerImageUrl
-        description
-        htmlContent
-        backgroundColor
-        isFavorite
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -4747,24 +1743,12 @@ export const getTag = /* GraphQL */ `
       id
       label
       exercises {
-        items {
-          id
-          exerciseID
-          tagID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -4778,49 +1762,12 @@ export const listTags = /* GraphQL */ `
       items {
         id
         label
-        exercises {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncTags = /* GraphQL */ `
-  query SyncTags(
-    $filter: ModelTagFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncTags(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        label
-        exercises {
-          nextToken
-          startedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -4837,10 +1784,8 @@ export const getUserWorkoutProgress = /* GraphQL */ `
       workoutExerciseCount
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       workoutUserWorkoutProgressId
+      __typename
     }
   }
 `;
@@ -4866,47 +1811,11 @@ export const listUserWorkoutProgresses = /* GraphQL */ `
         workoutExerciseCount
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutUserWorkoutProgressId
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncUserWorkoutProgresses = /* GraphQL */ `
-  query SyncUserWorkoutProgresses(
-    $filter: ModelUserWorkoutProgressFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncUserWorkoutProgresses(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        userId
-        completedExercises
-        progress
-        isCompleted
-        workoutId
-        workoutName
-        workoutExerciseCount
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        workoutUserWorkoutProgressId
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -4917,9 +1826,7 @@ export const getUserProgramProgress = /* GraphQL */ `
       username
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -4939,39 +1846,10 @@ export const listUserProgramProgresses = /* GraphQL */ `
         username
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncUserProgramProgresses = /* GraphQL */ `
-  query SyncUserProgramProgresses(
-    $filter: ModelUserProgramProgressFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncUserProgramProgresses(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        username
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -4986,17 +1864,11 @@ export const getVideoExercise = /* GraphQL */ `
         title
         description
         duration
-        Exercises {
-          nextToken
-          startedAt
-        }
         VideoUrl
         thumbnailUrl
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -5012,65 +1884,14 @@ export const getVideoExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -5085,110 +1906,12 @@ export const listVideoExercises = /* GraphQL */ `
         id
         videoID
         exerciseID
-        video {
-          id
-          title
-          description
-          duration
-          VideoUrl
-          thumbnailUrl
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncVideoExercises = /* GraphQL */ `
-  query SyncVideoExercises(
-    $filter: ModelVideoExerciseFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncVideoExercises(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        videoID
-        exerciseID
-        video {
-          id
-          title
-          description
-          duration
-          VideoUrl
-          thumbnailUrl
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -5207,31 +1930,9 @@ export const getTrainingTypeExercise = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -5247,65 +1948,14 @@ export const getTrainingTypeExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -5324,114 +1974,12 @@ export const listTrainingTypeExercises = /* GraphQL */ `
         id
         trainingTypeID
         exerciseID
-        trainingType {
-          id
-          name
-          gender
-          menuName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncTrainingTypeExercises = /* GraphQL */ `
-  query SyncTrainingTypeExercises(
-    $filter: ModelTrainingTypeExerciseFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncTrainingTypeExercises(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        trainingTypeID
-        exerciseID
-        trainingType {
-          id
-          name
-          gender
-          menuName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -5450,31 +1998,9 @@ export const getUserGoalTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       user {
         id
@@ -5492,33 +2018,13 @@ export const getUserGoalTrainingTypes = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -5537,116 +2043,12 @@ export const listUserGoalTrainingTypes = /* GraphQL */ `
         id
         trainingTypeID
         userID
-        trainingType {
-          id
-          name
-          gender
-          menuName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncUserGoalTrainingTypes = /* GraphQL */ `
-  query SyncUserGoalTrainingTypes(
-    $filter: ModelUserGoalTrainingTypesFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncUserGoalTrainingTypes(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        trainingTypeID
-        userID
-        trainingType {
-          id
-          name
-          gender
-          menuName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -5665,31 +2067,9 @@ export const getWorkoutTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       workout {
         id
@@ -5705,91 +2085,15 @@ export const getWorkoutTrainingTypes = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -5808,116 +2112,12 @@ export const listWorkoutTrainingTypes = /* GraphQL */ `
         id
         trainingTypeID
         workoutID
-        trainingType {
-          id
-          name
-          gender
-          menuName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        workout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncWorkoutTrainingTypes = /* GraphQL */ `
-  query SyncWorkoutTrainingTypes(
-    $filter: ModelWorkoutTrainingTypesFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncWorkoutTrainingTypes(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        trainingTypeID
-        workoutID
-        trainingType {
-          id
-          name
-          gender
-          menuName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        workout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -5936,31 +2136,9 @@ export const getProgramTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       program {
         id
@@ -5971,29 +2149,13 @@ export const getProgramTrainingTypes = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6012,102 +2174,12 @@ export const listProgramTrainingTypes = /* GraphQL */ `
         id
         trainingTypeID
         programID
-        trainingType {
-          id
-          name
-          gender
-          menuName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        program {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncProgramTrainingTypes = /* GraphQL */ `
-  query SyncProgramTrainingTypes(
-    $filter: ModelProgramTrainingTypesFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncProgramTrainingTypes(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        trainingTypeID
-        programID
-        trainingType {
-          id
-          name
-          gender
-          menuName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        program {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -6126,31 +2198,9 @@ export const getChallengeTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       challenge {
         id
@@ -6161,64 +2211,14 @@ export const getChallengeTrainingTypes = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6237,104 +2237,12 @@ export const listChallengeTrainingTypes = /* GraphQL */ `
         id
         trainingTypeID
         challengeID
-        trainingType {
-          id
-          name
-          gender
-          menuName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        challenge {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          challengeAuthorUserId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncChallengeTrainingTypes = /* GraphQL */ `
-  query SyncChallengeTrainingTypes(
-    $filter: ModelChallengeTrainingTypesFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncChallengeTrainingTypes(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        trainingTypeID
-        challengeID
-        trainingType {
-          id
-          name
-          gender
-          menuName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        challenge {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          challengeAuthorUserId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -6350,31 +2258,9 @@ export const getMuscleGroupExercise = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -6390,65 +2276,14 @@ export const getMuscleGroupExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6467,108 +2302,12 @@ export const listMuscleGroupExercises = /* GraphQL */ `
         id
         muscleGroupID
         exerciseID
-        muscleGroup {
-          id
-          name
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncMuscleGroupExercises = /* GraphQL */ `
-  query SyncMuscleGroupExercises(
-    $filter: ModelMuscleGroupExerciseFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncMuscleGroupExercises(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        muscleGroupID
-        exerciseID
-        muscleGroup {
-          id
-          name
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -6584,31 +2323,9 @@ export const getUserGoalMuscleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       user {
         id
@@ -6626,33 +2343,13 @@ export const getUserGoalMuscleGroups = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6671,110 +2368,12 @@ export const listUserGoalMuscleGroups = /* GraphQL */ `
         id
         muscleGroupID
         userID
-        muscleGroup {
-          id
-          name
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncUserGoalMuscleGroups = /* GraphQL */ `
-  query SyncUserGoalMuscleGroups(
-    $filter: ModelUserGoalMuscleGroupsFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncUserGoalMuscleGroups(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        muscleGroupID
-        userID
-        muscleGroup {
-          id
-          name
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -6790,31 +2389,9 @@ export const getWorkoutMusleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       workout {
         id
@@ -6830,91 +2407,15 @@ export const getWorkoutMusleGroups = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6933,110 +2434,12 @@ export const listWorkoutMusleGroups = /* GraphQL */ `
         id
         muscleGroupID
         workoutID
-        muscleGroup {
-          id
-          name
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        workout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncWorkoutMusleGroups = /* GraphQL */ `
-  query SyncWorkoutMusleGroups(
-    $filter: ModelWorkoutMusleGroupsFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncWorkoutMusleGroups(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        muscleGroupID
-        workoutID
-        muscleGroup {
-          id
-          name
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        workout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -7052,31 +2455,9 @@ export const getProgramMuscleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       program {
         id
@@ -7087,29 +2468,13 @@ export const getProgramMuscleGroups = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -7128,96 +2493,12 @@ export const listProgramMuscleGroups = /* GraphQL */ `
         id
         muscleGroupID
         programID
-        muscleGroup {
-          id
-          name
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        program {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncProgramMuscleGroups = /* GraphQL */ `
-  query SyncProgramMuscleGroups(
-    $filter: ModelProgramMuscleGroupsFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncProgramMuscleGroups(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        muscleGroupID
-        programID
-        muscleGroup {
-          id
-          name
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        program {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -7233,31 +2514,9 @@ export const getChallengeMuscleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       challenge {
         id
@@ -7268,64 +2527,14 @@ export const getChallengeMuscleGroups = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -7344,98 +2553,12 @@ export const listChallengeMuscleGroups = /* GraphQL */ `
         id
         muscleGroupID
         challengeID
-        muscleGroup {
-          id
-          name
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        challenge {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          challengeAuthorUserId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncChallengeMuscleGroups = /* GraphQL */ `
-  query SyncChallengeMuscleGroups(
-    $filter: ModelChallengeMuscleGroupsFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncChallengeMuscleGroups(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        muscleGroupID
-        challengeID
-        muscleGroup {
-          id
-          name
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        challenge {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          challengeAuthorUserId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -7450,15 +2573,9 @@ export const getEquipmentExercise = /* GraphQL */ `
         name
         imageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -7474,65 +2591,14 @@ export const getEquipmentExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -7551,106 +2617,12 @@ export const listEquipmentExercises = /* GraphQL */ `
         id
         equipmentID
         exerciseID
-        equipment {
-          id
-          name
-          imageUrl
-          backgroundColor
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncEquipmentExercises = /* GraphQL */ `
-  query SyncEquipmentExercises(
-    $filter: ModelEquipmentExerciseFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncEquipmentExercises(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        equipmentID
-        exerciseID
-        equipment {
-          id
-          name
-          imageUrl
-          backgroundColor
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -7674,78 +2646,21 @@ export const getTagExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       tag {
         id
         label
-        exercises {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -7760,102 +2675,12 @@ export const listTagExercises = /* GraphQL */ `
         id
         exerciseID
         tagID
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        tag {
-          id
-          label
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncTagExercises = /* GraphQL */ `
-  query SyncTagExercises(
-    $filter: ModelTagExerciseFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncTagExercises(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        exerciseID
-        tagID
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        tag {
-          id
-          label
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -7879,59 +2704,10 @@ export const getChallengeExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       challenge {
         id
@@ -7942,64 +2718,14 @@ export const getChallengeExercise = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -8018,116 +2744,12 @@ export const listChallengeExercises = /* GraphQL */ `
         id
         exerciseID
         challengeID
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        challenge {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          challengeAuthorUserId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncChallengeExercises = /* GraphQL */ `
-  query SyncChallengeExercises(
-    $filter: ModelChallengeExerciseFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncChallengeExercises(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        exerciseID
-        challengeID
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        challenge {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          challengeAuthorUserId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -8151,59 +2773,10 @@ export const getWorkoutExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       workout {
         id
@@ -8219,91 +2792,15 @@ export const getWorkoutExercise = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -8322,128 +2819,12 @@ export const listWorkoutExercises = /* GraphQL */ `
         id
         exerciseID
         workoutID
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        workout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncWorkoutExercises = /* GraphQL */ `
-  query SyncWorkoutExercises(
-    $filter: ModelWorkoutExerciseFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncWorkoutExercises(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        exerciseID
-        workoutID
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        workout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -8467,112 +2848,25 @@ export const getCoachExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       coach {
         id
         username
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         backgroundImageUrl
         presentationVideoUrl
         bio
-        exercises {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         coachUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -8587,110 +2881,12 @@ export const listCoachExercises = /* GraphQL */ `
         id
         exerciseID
         coachID
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        coach {
-          id
-          username
-          backgroundImageUrl
-          presentationVideoUrl
-          bio
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          coachUserId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncCoachExercises = /* GraphQL */ `
-  query SyncCoachExercises(
-    $filter: ModelCoachExerciseFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncCoachExercises(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        exerciseID
-        coachID
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
-        coach {
-          id
-          username
-          backgroundImageUrl
-          presentationVideoUrl
-          bio
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          coachUserId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -8703,49 +2899,13 @@ export const getCoachWorkouts = /* GraphQL */ `
       coach {
         id
         username
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         backgroundImageUrl
         presentationVideoUrl
         bio
-        exercises {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         coachUserId
+        __typename
       }
       workout {
         id
@@ -8761,91 +2921,15 @@ export const getCoachWorkouts = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -8860,112 +2944,12 @@ export const listCoachWorkouts = /* GraphQL */ `
         id
         coachID
         workoutID
-        coach {
-          id
-          username
-          backgroundImageUrl
-          presentationVideoUrl
-          bio
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          coachUserId
-        }
-        workout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncCoachWorkouts = /* GraphQL */ `
-  query SyncCoachWorkouts(
-    $filter: ModelCoachWorkoutsFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncCoachWorkouts(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        coachID
-        workoutID
-        coach {
-          id
-          username
-          backgroundImageUrl
-          presentationVideoUrl
-          bio
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          coachUserId
-        }
-        workout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -8978,49 +2962,13 @@ export const getCoachChallenges = /* GraphQL */ `
       coach {
         id
         username
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         backgroundImageUrl
         presentationVideoUrl
         bio
-        exercises {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         coachUserId
+        __typename
       }
       challenge {
         id
@@ -9031,64 +2979,14 @@ export const getCoachChallenges = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -9103,100 +3001,12 @@ export const listCoachChallenges = /* GraphQL */ `
         id
         coachID
         challengeID
-        coach {
-          id
-          username
-          backgroundImageUrl
-          presentationVideoUrl
-          bio
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          coachUserId
-        }
-        challenge {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          challengeAuthorUserId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncCoachChallenges = /* GraphQL */ `
-  query SyncCoachChallenges(
-    $filter: ModelCoachChallengesFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncCoachChallenges(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        coachID
-        challengeID
-        coach {
-          id
-          username
-          backgroundImageUrl
-          presentationVideoUrl
-          bio
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          coachUserId
-        }
-        challenge {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          challengeAuthorUserId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -9215,23 +3025,9 @@ export const getProgramWorkouts = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       workout {
         id
@@ -9247,91 +3043,15 @@ export const getProgramWorkouts = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -9346,116 +3066,12 @@ export const listProgramWorkouts = /* GraphQL */ `
         id
         programID
         workoutID
-        program {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        workout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncProgramWorkouts = /* GraphQL */ `
-  query SyncProgramWorkouts(
-    $filter: ModelProgramWorkoutsFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncProgramWorkouts(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        programID
-        workoutID
-        program {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        workout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;
@@ -9479,85 +3095,11 @@ export const getChallengeWorkouts = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       challenge {
         id
@@ -9568,64 +3110,14 @@ export const getChallengeWorkouts = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -9644,118 +3136,12 @@ export const listChallengeWorkouts = /* GraphQL */ `
         id
         workoutID
         challengeID
-        workout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
-        challenge {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          challengeAuthorUserId
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncChallengeWorkouts = /* GraphQL */ `
-  query SyncChallengeWorkouts(
-    $filter: ModelChallengeWorkoutsFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncChallengeWorkouts(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        workoutID
-        challengeID
-        workout {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
-        challenge {
-          id
-          name
-          imageUrl
-          homepageImageUrl
-          backgroundColor
-          description
-          duration
-          level
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          challengeAuthorUserId
-        }
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
+      __typename
     }
   }
 `;

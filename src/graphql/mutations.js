@@ -1,6 +1,57 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const createDietDayFoodPlan = /* GraphQL */ `
+  mutation CreateDietDayFoodPlan(
+    $input: CreateDietDayFoodPlanInput!
+    $condition: ModelDietDayFoodPlanConditionInput
+  ) {
+    createDietDayFoodPlan(input: $input, condition: $condition) {
+      id
+      time
+      target
+      content
+      dietdaydetailsID
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const updateDietDayFoodPlan = /* GraphQL */ `
+  mutation UpdateDietDayFoodPlan(
+    $input: UpdateDietDayFoodPlanInput!
+    $condition: ModelDietDayFoodPlanConditionInput
+  ) {
+    updateDietDayFoodPlan(input: $input, condition: $condition) {
+      id
+      time
+      target
+      content
+      dietdaydetailsID
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const deleteDietDayFoodPlan = /* GraphQL */ `
+  mutation DeleteDietDayFoodPlan(
+    $input: DeleteDietDayFoodPlanInput!
+    $condition: ModelDietDayFoodPlanConditionInput
+  ) {
+    deleteDietDayFoodPlan(input: $input, condition: $condition) {
+      id
+      time
+      target
+      content
+      dietdaydetailsID
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
 export const createVideo = /* GraphQL */ `
   mutation CreateVideo(
     $input: CreateVideoInput!
@@ -12,26 +63,14 @@ export const createVideo = /* GraphQL */ `
       description
       duration
       Exercises {
-        items {
-          id
-          videoID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       VideoUrl
       thumbnailUrl
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -46,26 +85,14 @@ export const updateVideo = /* GraphQL */ `
       description
       duration
       Exercises {
-        items {
-          id
-          videoID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       VideoUrl
       thumbnailUrl
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -80,26 +107,14 @@ export const deleteVideo = /* GraphQL */ `
       description
       duration
       Exercises {
-        items {
-          id
-          videoID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       VideoUrl
       thumbnailUrl
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -116,12 +131,57 @@ export const createDietDayDetails = /* GraphQL */ `
       protein
       quarge
       recipe
+      strMealThumb
+      strTags
+      strYoutube
+      strIngredient1
+      strIngredient2
+      strIngredient3
+      strIngredient4
+      strIngredient5
+      strIngredient6
+      strIngredient7
+      strIngredient8
+      strIngredient9
+      strIngredient10
+      strIngredient11
+      strIngredient12
+      strIngredient13
+      strIngredient14
+      strIngredient15
+      strIngredient16
+      strIngredient17
+      strIngredient18
+      strIngredient19
+      strIngredient20
+      strMeasure1
+      strMeasure2
+      strMeasure3
+      strMeasure4
+      strMeasure5
+      strMeasure6
+      strMeasure7
+      strMeasure8
+      strMeasure9
+      strMeasure10
+      strMeasure11
+      strMeasure12
+      strMeasure13
+      strMeasure14
+      strMeasure15
+      strMeasure16
+      strMeasure17
+      strMeasure18
+      strMeasure19
+      strMeasure20
       dietdaysID
+      DietDayFoodPlans {
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -138,12 +198,57 @@ export const updateDietDayDetails = /* GraphQL */ `
       protein
       quarge
       recipe
+      strMealThumb
+      strTags
+      strYoutube
+      strIngredient1
+      strIngredient2
+      strIngredient3
+      strIngredient4
+      strIngredient5
+      strIngredient6
+      strIngredient7
+      strIngredient8
+      strIngredient9
+      strIngredient10
+      strIngredient11
+      strIngredient12
+      strIngredient13
+      strIngredient14
+      strIngredient15
+      strIngredient16
+      strIngredient17
+      strIngredient18
+      strIngredient19
+      strIngredient20
+      strMeasure1
+      strMeasure2
+      strMeasure3
+      strMeasure4
+      strMeasure5
+      strMeasure6
+      strMeasure7
+      strMeasure8
+      strMeasure9
+      strMeasure10
+      strMeasure11
+      strMeasure12
+      strMeasure13
+      strMeasure14
+      strMeasure15
+      strMeasure16
+      strMeasure17
+      strMeasure18
+      strMeasure19
+      strMeasure20
       dietdaysID
+      DietDayFoodPlans {
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -160,12 +265,57 @@ export const deleteDietDayDetails = /* GraphQL */ `
       protein
       quarge
       recipe
+      strMealThumb
+      strTags
+      strYoutube
+      strIngredient1
+      strIngredient2
+      strIngredient3
+      strIngredient4
+      strIngredient5
+      strIngredient6
+      strIngredient7
+      strIngredient8
+      strIngredient9
+      strIngredient10
+      strIngredient11
+      strIngredient12
+      strIngredient13
+      strIngredient14
+      strIngredient15
+      strIngredient16
+      strIngredient17
+      strIngredient18
+      strIngredient19
+      strIngredient20
+      strMeasure1
+      strMeasure2
+      strMeasure3
+      strMeasure4
+      strMeasure5
+      strMeasure6
+      strMeasure7
+      strMeasure8
+      strMeasure9
+      strMeasure10
+      strMeasure11
+      strMeasure12
+      strMeasure13
+      strMeasure14
+      strMeasure15
+      strMeasure16
+      strMeasure17
+      strMeasure18
+      strMeasure19
+      strMeasure20
       dietdaysID
+      DietDayFoodPlans {
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -179,31 +329,14 @@ export const createDietDays = /* GraphQL */ `
       day
       title
       DietDayDetails {
-        items {
-          id
-          time
-          goal
-          content
-          protein
-          quarge
-          recipe
-          dietdaysID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       description
       dietrecipeID
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -217,31 +350,14 @@ export const updateDietDays = /* GraphQL */ `
       day
       title
       DietDayDetails {
-        items {
-          id
-          time
-          goal
-          content
-          protein
-          quarge
-          recipe
-          dietdaysID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       description
       dietrecipeID
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -255,31 +371,14 @@ export const deleteDietDays = /* GraphQL */ `
       day
       title
       DietDayDetails {
-        items {
-          id
-          time
-          goal
-          content
-          protein
-          quarge
-          recipe
-          dietdaysID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       description
       dietrecipeID
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -301,26 +400,19 @@ export const createDietRecipeProgress = /* GraphQL */ `
         description
         imageUrl
         onboardingImageUrl
+        isstarted
         backgroundColor
-        Diets {
-          nextToken
-          startedAt
-        }
         userID
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       userID
       isPaused
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       dietRecipeProgressDietRecipeId
+      __typename
     }
   }
 `;
@@ -342,26 +434,19 @@ export const updateDietRecipeProgress = /* GraphQL */ `
         description
         imageUrl
         onboardingImageUrl
+        isstarted
         backgroundColor
-        Diets {
-          nextToken
-          startedAt
-        }
         userID
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       userID
       isPaused
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       dietRecipeProgressDietRecipeId
+      __typename
     }
   }
 `;
@@ -383,26 +468,19 @@ export const deleteDietRecipeProgress = /* GraphQL */ `
         description
         imageUrl
         onboardingImageUrl
+        isstarted
         backgroundColor
-        Diets {
-          nextToken
-          startedAt
-        }
         userID
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       userID
       isPaused
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       dietRecipeProgressDietRecipeId
+      __typename
     }
   }
 `;
@@ -419,29 +497,16 @@ export const createDietRecipe = /* GraphQL */ `
       description
       imageUrl
       onboardingImageUrl
+      isstarted
       backgroundColor
       Diets {
-        items {
-          id
-          day
-          title
-          description
-          dietrecipeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       userID
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -458,29 +523,16 @@ export const updateDietRecipe = /* GraphQL */ `
       description
       imageUrl
       onboardingImageUrl
+      isstarted
       backgroundColor
       Diets {
-        items {
-          id
-          day
-          title
-          description
-          dietrecipeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       userID
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -497,29 +549,16 @@ export const deleteDietRecipe = /* GraphQL */ `
       description
       imageUrl
       onboardingImageUrl
+      isstarted
       backgroundColor
       Diets {
-        items {
-          id
-          day
-          title
-          description
-          dietrecipeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       userID
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -538,80 +577,28 @@ export const createTrainingType = /* GraphQL */ `
       onboardingImageUrl
       backgroundColor
       exercises {
-        items {
-          id
-          trainingTypeID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       users {
-        items {
-          id
-          trainingTypeID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          trainingTypeID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       programs {
-        items {
-          id
-          trainingTypeID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          trainingTypeID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -630,80 +617,28 @@ export const updateTrainingType = /* GraphQL */ `
       onboardingImageUrl
       backgroundColor
       exercises {
-        items {
-          id
-          trainingTypeID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       users {
-        items {
-          id
-          trainingTypeID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          trainingTypeID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       programs {
-        items {
-          id
-          trainingTypeID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          trainingTypeID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -722,80 +657,28 @@ export const deleteTrainingType = /* GraphQL */ `
       onboardingImageUrl
       backgroundColor
       exercises {
-        items {
-          id
-          trainingTypeID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       users {
-        items {
-          id
-          trainingTypeID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          trainingTypeID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       programs {
-        items {
-          id
-          trainingTypeID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          trainingTypeID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -811,80 +694,28 @@ export const createMuscleGroup = /* GraphQL */ `
       specialBackgroundColor
       imageUrl
       exercises {
-        items {
-          id
-          muscleGroupID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       users {
-        items {
-          id
-          muscleGroupID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          muscleGroupID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       programs {
-        items {
-          id
-          muscleGroupID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          muscleGroupID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -900,80 +731,28 @@ export const updateMuscleGroup = /* GraphQL */ `
       specialBackgroundColor
       imageUrl
       exercises {
-        items {
-          id
-          muscleGroupID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       users {
-        items {
-          id
-          muscleGroupID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          muscleGroupID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       programs {
-        items {
-          id
-          muscleGroupID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          muscleGroupID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -989,80 +768,28 @@ export const deleteMuscleGroup = /* GraphQL */ `
       specialBackgroundColor
       imageUrl
       exercises {
-        items {
-          id
-          muscleGroupID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       users {
-        items {
-          id
-          muscleGroupID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          muscleGroupID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       programs {
-        items {
-          id
-          muscleGroupID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          muscleGroupID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -1078,10 +805,8 @@ export const createOnboarding = /* GraphQL */ `
       isDisplay
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       owner
+      __typename
     }
   }
 `;
@@ -1097,10 +822,8 @@ export const updateOnboarding = /* GraphQL */ `
       isDisplay
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       owner
+      __typename
     }
   }
 `;
@@ -1116,10 +839,8 @@ export const deleteOnboarding = /* GraphQL */ `
       isDisplay
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       owner
+      __typename
     }
   }
 `;
@@ -1134,24 +855,12 @@ export const createEquipment = /* GraphQL */ `
       imageUrl
       backgroundColor
       exercises {
-        items {
-          id
-          equipmentID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -1166,24 +875,12 @@ export const updateEquipment = /* GraphQL */ `
       imageUrl
       backgroundColor
       exercises {
-        items {
-          id
-          equipmentID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -1198,24 +895,12 @@ export const deleteEquipment = /* GraphQL */ `
       imageUrl
       backgroundColor
       exercises {
-        items {
-          id
-          equipmentID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -1240,158 +925,53 @@ export const createExercise = /* GraphQL */ `
       exerciseExtension2
       exerciseItem {
         id
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         sets
         workoutTime
         restTime
         order
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutExerciseItemsId
         challengeExerciseItemsId
         exerciseItemExerciseId
+        __typename
       }
       tags {
-        items {
-          id
-          exerciseID
-          tagID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       videos {
-        items {
-          id
-          videoID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          exerciseID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          exerciseID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingtypes {
-        items {
-          id
-          trainingTypeID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       musclegroups {
-        items {
-          id
-          muscleGroupID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       equipments {
-        items {
-          id
-          equipmentID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       coachs {
-        items {
-          id
-          exerciseID
-          coachID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       exerciseExerciseItemId
+      __typename
     }
   }
 `;
@@ -1416,158 +996,53 @@ export const updateExercise = /* GraphQL */ `
       exerciseExtension2
       exerciseItem {
         id
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         sets
         workoutTime
         restTime
         order
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutExerciseItemsId
         challengeExerciseItemsId
         exerciseItemExerciseId
+        __typename
       }
       tags {
-        items {
-          id
-          exerciseID
-          tagID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       videos {
-        items {
-          id
-          videoID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          exerciseID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          exerciseID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingtypes {
-        items {
-          id
-          trainingTypeID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       musclegroups {
-        items {
-          id
-          muscleGroupID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       equipments {
-        items {
-          id
-          equipmentID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       coachs {
-        items {
-          id
-          exerciseID
-          coachID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       exerciseExerciseItemId
+      __typename
     }
   }
 `;
@@ -1592,158 +1067,53 @@ export const deleteExercise = /* GraphQL */ `
       exerciseExtension2
       exerciseItem {
         id
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         sets
         workoutTime
         restTime
         order
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutExerciseItemsId
         challengeExerciseItemsId
         exerciseItemExerciseId
+        __typename
       }
       tags {
-        items {
-          id
-          exerciseID
-          tagID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       videos {
-        items {
-          id
-          videoID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          exerciseID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          exerciseID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingtypes {
-        items {
-          id
-          trainingTypeID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       musclegroups {
-        items {
-          id
-          muscleGroupID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       equipments {
-        items {
-          id
-          equipmentID
-          exerciseID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       coachs {
-        items {
-          id
-          exerciseID
-          coachID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       exerciseExerciseItemId
+      __typename
     }
   }
 `;
@@ -1770,27 +1140,9 @@ export const createPost = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       category
       title
@@ -1800,10 +1152,8 @@ export const createPost = /* GraphQL */ `
       content
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       postUserId
+      __typename
     }
   }
 `;
@@ -1830,27 +1180,9 @@ export const updatePost = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       category
       title
@@ -1860,10 +1192,8 @@ export const updatePost = /* GraphQL */ `
       content
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       postUserId
+      __typename
     }
   }
 `;
@@ -1890,27 +1220,9 @@ export const deletePost = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       category
       title
@@ -1920,10 +1232,8 @@ export const deletePost = /* GraphQL */ `
       content
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       postUserId
+      __typename
     }
   }
 `;
@@ -1951,79 +1261,29 @@ export const createCoach = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       backgroundImageUrl
       presentationVideoUrl
       bio
       exercises {
-        items {
-          id
-          exerciseID
-          coachID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          coachID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          coachID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       coachUserId
+      __typename
     }
   }
 `;
@@ -2051,79 +1311,29 @@ export const updateCoach = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       backgroundImageUrl
       presentationVideoUrl
       bio
       exercises {
-        items {
-          id
-          exerciseID
-          coachID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          coachID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          coachID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       coachUserId
+      __typename
     }
   }
 `;
@@ -2151,79 +1361,29 @@ export const deleteCoach = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       backgroundImageUrl
       presentationVideoUrl
       bio
       exercises {
-        items {
-          id
-          exerciseID
-          coachID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       workouts {
-        items {
-          id
-          coachID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          coachID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       coachUserId
+      __typename
     }
   }
 `;
@@ -2248,59 +1408,10 @@ export const createExerciseItem = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       sets
       workoutTime
@@ -2308,12 +1419,10 @@ export const createExerciseItem = /* GraphQL */ `
       order
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       workoutExerciseItemsId
       challengeExerciseItemsId
       exerciseItemExerciseId
+      __typename
     }
   }
 `;
@@ -2338,59 +1447,10 @@ export const updateExerciseItem = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       sets
       workoutTime
@@ -2398,12 +1458,10 @@ export const updateExerciseItem = /* GraphQL */ `
       order
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       workoutExerciseItemsId
       challengeExerciseItemsId
       exerciseItemExerciseId
+      __typename
     }
   }
 `;
@@ -2428,59 +1486,10 @@ export const deleteExerciseItem = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       sets
       workoutTime
@@ -2488,12 +1497,10 @@ export const deleteExerciseItem = /* GraphQL */ `
       order
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       workoutExerciseItemsId
       challengeExerciseItemsId
       exerciseItemExerciseId
+      __typename
     }
   }
 `;
@@ -2520,27 +1527,9 @@ export const createNewsShownToUser = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       news {
         id
@@ -2555,17 +1544,13 @@ export const createNewsShownToUser = /* GraphQL */ `
         contentHtml
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       newsShownToUserUserId
       newsShownToUserNewsId
+      __typename
     }
   }
 `;
@@ -2592,27 +1577,9 @@ export const updateNewsShownToUser = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       news {
         id
@@ -2627,17 +1594,13 @@ export const updateNewsShownToUser = /* GraphQL */ `
         contentHtml
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       newsShownToUserUserId
       newsShownToUserNewsId
+      __typename
     }
   }
 `;
@@ -2664,27 +1627,9 @@ export const deleteNewsShownToUser = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       news {
         id
@@ -2699,17 +1644,13 @@ export const deleteNewsShownToUser = /* GraphQL */ `
         contentHtml
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       newsShownToUserUserId
       newsShownToUserNewsId
+      __typename
     }
   }
 `;
@@ -2735,76 +1676,24 @@ export const createUser = /* GraphQL */ `
       age
       userType
       goalTrainingTypes {
-        items {
-          id
-          trainingTypeID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       goalMuscleGroups {
-        items {
-          id
-          muscleGroupID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       recipes {
-        items {
-          id
-          name
-          gender
-          recipeName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       DietRecipeProgresses {
-        items {
-          id
-          startDate
-          description
-          comment
-          userID
-          isPaused
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          dietRecipeProgressDietRecipeId
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -2830,76 +1719,24 @@ export const updateUser = /* GraphQL */ `
       age
       userType
       goalTrainingTypes {
-        items {
-          id
-          trainingTypeID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       goalMuscleGroups {
-        items {
-          id
-          muscleGroupID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       recipes {
-        items {
-          id
-          name
-          gender
-          recipeName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       DietRecipeProgresses {
-        items {
-          id
-          startDate
-          description
-          comment
-          userID
-          isPaused
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          dietRecipeProgressDietRecipeId
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -2925,76 +1762,24 @@ export const deleteUser = /* GraphQL */ `
       age
       userType
       goalTrainingTypes {
-        items {
-          id
-          trainingTypeID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       goalMuscleGroups {
-        items {
-          id
-          muscleGroupID
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       recipes {
-        items {
-          id
-          name
-          gender
-          recipeName
-          description
-          imageUrl
-          onboardingImageUrl
-          backgroundColor
-          userID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       DietRecipeProgresses {
-        items {
-          id
-          startDate
-          description
-          comment
-          userID
-          isPaused
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          dietRecipeProgressDietRecipeId
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -3016,9 +1801,7 @@ export const createNews = /* GraphQL */ `
       contentHtml
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -3040,9 +1823,7 @@ export const updateNews = /* GraphQL */ `
       contentHtml
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -3064,9 +1845,7 @@ export const deleteNews = /* GraphQL */ `
       contentHtml
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -3085,52 +1864,20 @@ export const createProgram = /* GraphQL */ `
       duration
       level
       workouts {
-        items {
-          id
-          programID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       muscleGroups {
-        items {
-          id
-          muscleGroupID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingTypes {
-        items {
-          id
-          trainingTypeID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -3149,52 +1896,20 @@ export const updateProgram = /* GraphQL */ `
       duration
       level
       workouts {
-        items {
-          id
-          programID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       muscleGroups {
-        items {
-          id
-          muscleGroupID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingTypes {
-        items {
-          id
-          trainingTypeID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -3213,52 +1928,20 @@ export const deleteProgram = /* GraphQL */ `
       duration
       level
       workouts {
-        items {
-          id
-          programID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       muscleGroups {
-        items {
-          id
-          muscleGroupID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingTypes {
-        items {
-          id
-          trainingTypeID
-          programID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -3282,109 +1965,32 @@ export const createWorkout = /* GraphQL */ `
       equipment
       calories
       muscleGroups {
-        items {
-          id
-          muscleGroupID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingTypes {
-        items {
-          id
-          trainingTypeID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       programs {
-        items {
-          id
-          programID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          workoutID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       exerciseItems {
-        items {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
         nextToken
-        startedAt
+        __typename
       }
       exercises {
-        items {
-          id
-          exerciseID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       properties {
-        items {
-          id
-          langu
-          text
-          icon
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutPropertiesId
-        }
         nextToken
-        startedAt
+        __typename
       }
       category {
         id
@@ -3394,29 +2000,13 @@ export const createWorkout = /* GraphQL */ `
         description
         backgroundColor
         isFavorite
-        workouts {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       authorCoach {
-        items {
-          id
-          coachID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       authorUser {
         id
@@ -3434,55 +2024,19 @@ export const createWorkout = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       userWorkoutProgress {
-        items {
-          id
-          userId
-          completedExercises
-          progress
-          isCompleted
-          workoutId
-          workoutName
-          workoutExerciseCount
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutUserWorkoutProgressId
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       categoryWorkoutsId
       workoutAuthorUserId
+      __typename
     }
   }
 `;
@@ -3506,109 +2060,32 @@ export const updateWorkout = /* GraphQL */ `
       equipment
       calories
       muscleGroups {
-        items {
-          id
-          muscleGroupID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingTypes {
-        items {
-          id
-          trainingTypeID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       programs {
-        items {
-          id
-          programID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          workoutID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       exerciseItems {
-        items {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
         nextToken
-        startedAt
+        __typename
       }
       exercises {
-        items {
-          id
-          exerciseID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       properties {
-        items {
-          id
-          langu
-          text
-          icon
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutPropertiesId
-        }
         nextToken
-        startedAt
+        __typename
       }
       category {
         id
@@ -3618,29 +2095,13 @@ export const updateWorkout = /* GraphQL */ `
         description
         backgroundColor
         isFavorite
-        workouts {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       authorCoach {
-        items {
-          id
-          coachID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       authorUser {
         id
@@ -3658,55 +2119,19 @@ export const updateWorkout = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       userWorkoutProgress {
-        items {
-          id
-          userId
-          completedExercises
-          progress
-          isCompleted
-          workoutId
-          workoutName
-          workoutExerciseCount
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutUserWorkoutProgressId
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       categoryWorkoutsId
       workoutAuthorUserId
+      __typename
     }
   }
 `;
@@ -3730,109 +2155,32 @@ export const deleteWorkout = /* GraphQL */ `
       equipment
       calories
       muscleGroups {
-        items {
-          id
-          muscleGroupID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingTypes {
-        items {
-          id
-          trainingTypeID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       programs {
-        items {
-          id
-          programID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       challenges {
-        items {
-          id
-          workoutID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       exerciseItems {
-        items {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
         nextToken
-        startedAt
+        __typename
       }
       exercises {
-        items {
-          id
-          exerciseID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       properties {
-        items {
-          id
-          langu
-          text
-          icon
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutPropertiesId
-        }
         nextToken
-        startedAt
+        __typename
       }
       category {
         id
@@ -3842,29 +2190,13 @@ export const deleteWorkout = /* GraphQL */ `
         description
         backgroundColor
         isFavorite
-        workouts {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       authorCoach {
-        items {
-          id
-          coachID
-          workoutID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       authorUser {
         id
@@ -3882,55 +2214,19 @@ export const deleteWorkout = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       userWorkoutProgress {
-        items {
-          id
-          userId
-          completedExercises
-          progress
-          isCompleted
-          workoutId
-          workoutName
-          workoutExerciseCount
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutUserWorkoutProgressId
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       categoryWorkoutsId
       workoutAuthorUserId
+      __typename
     }
   }
 `;
@@ -3949,93 +2245,28 @@ export const createChallenge = /* GraphQL */ `
       duration
       level
       workouts {
-        items {
-          id
-          workoutID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       exerciseItems {
-        items {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
         nextToken
-        startedAt
+        __typename
       }
       exercises {
-        items {
-          id
-          exerciseID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       muscleGroups {
-        items {
-          id
-          muscleGroupID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingTypes {
-        items {
-          id
-          trainingTypeID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       authorCoach {
-        items {
-          id
-          coachID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       authorUser {
         id
@@ -4053,34 +2284,14 @@ export const createChallenge = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       challengeAuthorUserId
+      __typename
     }
   }
 `;
@@ -4099,93 +2310,28 @@ export const updateChallenge = /* GraphQL */ `
       duration
       level
       workouts {
-        items {
-          id
-          workoutID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       exerciseItems {
-        items {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
         nextToken
-        startedAt
+        __typename
       }
       exercises {
-        items {
-          id
-          exerciseID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       muscleGroups {
-        items {
-          id
-          muscleGroupID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingTypes {
-        items {
-          id
-          trainingTypeID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       authorCoach {
-        items {
-          id
-          coachID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       authorUser {
         id
@@ -4203,34 +2349,14 @@ export const updateChallenge = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       challengeAuthorUserId
+      __typename
     }
   }
 `;
@@ -4249,93 +2375,28 @@ export const deleteChallenge = /* GraphQL */ `
       duration
       level
       workouts {
-        items {
-          id
-          workoutID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       exerciseItems {
-        items {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
         nextToken
-        startedAt
+        __typename
       }
       exercises {
-        items {
-          id
-          exerciseID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       muscleGroups {
-        items {
-          id
-          muscleGroupID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       trainingTypes {
-        items {
-          id
-          trainingTypeID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       authorCoach {
-        items {
-          id
-          coachID
-          challengeID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       authorUser {
         id
@@ -4353,34 +2414,14 @@ export const deleteChallenge = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       challengeAuthorUserId
+      __typename
     }
   }
 `;
@@ -4396,10 +2437,8 @@ export const createWorkoutProperties = /* GraphQL */ `
       icon
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       workoutPropertiesId
+      __typename
     }
   }
 `;
@@ -4415,10 +2454,8 @@ export const updateWorkoutProperties = /* GraphQL */ `
       icon
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       workoutPropertiesId
+      __typename
     }
   }
 `;
@@ -4434,10 +2471,8 @@ export const deleteWorkoutProperties = /* GraphQL */ `
       icon
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       workoutPropertiesId
+      __typename
     }
   }
 `;
@@ -4462,85 +2497,11 @@ export const createUserWorkoutHistory = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       user {
         id
@@ -4558,27 +2519,9 @@ export const createUserWorkoutHistory = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       lastExercise {
         id
@@ -4594,108 +2537,34 @@ export const createUserWorkoutHistory = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       lastExerciseItem {
         id
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         sets
         workoutTime
         restTime
         order
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutExerciseItemsId
         challengeExerciseItemsId
         exerciseItemExerciseId
+        __typename
       }
       progress
       createdAt
       description
       exerciseCount
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       userWorkoutHistoryWorkoutId
       userWorkoutHistoryUserId
       userWorkoutHistoryLastExerciseId
       userWorkoutHistoryLastExerciseItemId
+      __typename
     }
   }
 `;
@@ -4720,85 +2589,11 @@ export const updateUserWorkoutHistory = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       user {
         id
@@ -4816,27 +2611,9 @@ export const updateUserWorkoutHistory = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       lastExercise {
         id
@@ -4852,108 +2629,34 @@ export const updateUserWorkoutHistory = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       lastExerciseItem {
         id
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         sets
         workoutTime
         restTime
         order
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutExerciseItemsId
         challengeExerciseItemsId
         exerciseItemExerciseId
+        __typename
       }
       progress
       createdAt
       description
       exerciseCount
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       userWorkoutHistoryWorkoutId
       userWorkoutHistoryUserId
       userWorkoutHistoryLastExerciseId
       userWorkoutHistoryLastExerciseItemId
+      __typename
     }
   }
 `;
@@ -4978,85 +2681,11 @@ export const deleteUserWorkoutHistory = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       user {
         id
@@ -5074,27 +2703,9 @@ export const deleteUserWorkoutHistory = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       lastExercise {
         id
@@ -5110,108 +2721,34 @@ export const deleteUserWorkoutHistory = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       lastExerciseItem {
         id
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         sets
         workoutTime
         restTime
         order
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutExerciseItemsId
         challengeExerciseItemsId
         exerciseItemExerciseId
+        __typename
       }
       progress
       createdAt
       description
       exerciseCount
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       userWorkoutHistoryWorkoutId
       userWorkoutHistoryUserId
       userWorkoutHistoryLastExerciseId
       userWorkoutHistoryLastExerciseItemId
+      __typename
     }
   }
 `;
@@ -5231,58 +2768,10 @@ export const createUserChallengeHistory = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       user {
         id
@@ -5300,27 +2789,9 @@ export const createUserChallengeHistory = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       progress
       createdAt
@@ -5328,11 +2799,9 @@ export const createUserChallengeHistory = /* GraphQL */ `
       exerciseCount
       exerciseDuraionInSeconds
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       userChallengeHistoryChallengeId
       userChallengeHistoryUserId
+      __typename
     }
   }
 `;
@@ -5352,58 +2821,10 @@ export const updateUserChallengeHistory = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       user {
         id
@@ -5421,27 +2842,9 @@ export const updateUserChallengeHistory = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       progress
       createdAt
@@ -5449,11 +2852,9 @@ export const updateUserChallengeHistory = /* GraphQL */ `
       exerciseCount
       exerciseDuraionInSeconds
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       userChallengeHistoryChallengeId
       userChallengeHistoryUserId
+      __typename
     }
   }
 `;
@@ -5473,58 +2874,10 @@ export const deleteUserChallengeHistory = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       user {
         id
@@ -5542,27 +2895,9 @@ export const deleteUserChallengeHistory = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       progress
       createdAt
@@ -5570,11 +2905,9 @@ export const deleteUserChallengeHistory = /* GraphQL */ `
       exerciseCount
       exerciseDuraionInSeconds
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       userChallengeHistoryChallengeId
       userChallengeHistoryUserId
+      __typename
     }
   }
 `;
@@ -5601,27 +2934,9 @@ export const createUserProgramHistory = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       program {
         id
@@ -5632,23 +2947,9 @@ export const createUserProgramHistory = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       lastWorkout {
         id
@@ -5664,132 +2965,33 @@ export const createUserProgramHistory = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       lastExerciseItem {
         id
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         sets
         workoutTime
         restTime
         order
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutExerciseItemsId
         challengeExerciseItemsId
         exerciseItemExerciseId
+        __typename
       }
       progress
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       userProgramHistoryUserId
       userProgramHistoryProgramId
       userProgramHistoryLastWorkoutId
       userProgramHistoryLastExerciseItemId
+      __typename
     }
   }
 `;
@@ -5816,27 +3018,9 @@ export const updateUserProgramHistory = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       program {
         id
@@ -5847,23 +3031,9 @@ export const updateUserProgramHistory = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       lastWorkout {
         id
@@ -5879,132 +3049,33 @@ export const updateUserProgramHistory = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       lastExerciseItem {
         id
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         sets
         workoutTime
         restTime
         order
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutExerciseItemsId
         challengeExerciseItemsId
         exerciseItemExerciseId
+        __typename
       }
       progress
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       userProgramHistoryUserId
       userProgramHistoryProgramId
       userProgramHistoryLastWorkoutId
       userProgramHistoryLastExerciseItemId
+      __typename
     }
   }
 `;
@@ -6031,27 +3102,9 @@ export const deleteUserProgramHistory = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       program {
         id
@@ -6062,23 +3115,9 @@ export const deleteUserProgramHistory = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       lastWorkout {
         id
@@ -6094,132 +3133,33 @@ export const deleteUserProgramHistory = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       lastExerciseItem {
         id
-        exercise {
-          id
-          title
-          thumbnailUrl
-          imageUrl
-          oneCycleDuration
-          views
-          likes
-          dislikes
-          description
-          backgroundColor
-          level
-          exerciseExtension1
-          exerciseExtension2
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          exerciseExerciseItemId
-        }
         sets
         workoutTime
         restTime
         order
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         workoutExerciseItemsId
         challengeExerciseItemsId
         exerciseItemExerciseId
+        __typename
       }
       progress
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       userProgramHistoryUserId
       userProgramHistoryProgramId
       userProgramHistoryLastWorkoutId
       userProgramHistoryLastExerciseItemId
+      __typename
     }
   }
 `;
@@ -6237,36 +3177,12 @@ export const createCategory = /* GraphQL */ `
       backgroundColor
       isFavorite
       workouts {
-        items {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6284,36 +3200,12 @@ export const updateCategory = /* GraphQL */ `
       backgroundColor
       isFavorite
       workouts {
-        items {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6331,36 +3223,12 @@ export const deleteCategory = /* GraphQL */ `
       backgroundColor
       isFavorite
       workouts {
-        items {
-          id
-          title
-          description
-          url
-          headerImage
-          backgroundColor
-          imageUrl
-          headerDescription
-          duration
-          numberofExercises
-          level
-          equipment
-          calories
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          categoryWorkoutsId
-          workoutAuthorUserId
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6382,9 +3250,7 @@ export const createBlog = /* GraphQL */ `
       isFavorite
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6406,9 +3272,7 @@ export const updateBlog = /* GraphQL */ `
       isFavorite
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6430,9 +3294,7 @@ export const deleteBlog = /* GraphQL */ `
       isFavorite
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6445,24 +3307,12 @@ export const createTag = /* GraphQL */ `
       id
       label
       exercises {
-        items {
-          id
-          exerciseID
-          tagID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6475,24 +3325,12 @@ export const updateTag = /* GraphQL */ `
       id
       label
       exercises {
-        items {
-          id
-          exerciseID
-          tagID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6505,24 +3343,12 @@ export const deleteTag = /* GraphQL */ `
       id
       label
       exercises {
-        items {
-          id
-          exerciseID
-          tagID
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         nextToken
-        startedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6542,10 +3368,8 @@ export const createUserWorkoutProgress = /* GraphQL */ `
       workoutExerciseCount
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       workoutUserWorkoutProgressId
+      __typename
     }
   }
 `;
@@ -6565,10 +3389,8 @@ export const updateUserWorkoutProgress = /* GraphQL */ `
       workoutExerciseCount
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       workoutUserWorkoutProgressId
+      __typename
     }
   }
 `;
@@ -6588,10 +3410,8 @@ export const deleteUserWorkoutProgress = /* GraphQL */ `
       workoutExerciseCount
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
       workoutUserWorkoutProgressId
+      __typename
     }
   }
 `;
@@ -6605,9 +3425,7 @@ export const createUserProgramProgress = /* GraphQL */ `
       username
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6621,9 +3439,7 @@ export const updateUserProgramProgress = /* GraphQL */ `
       username
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6637,9 +3453,7 @@ export const deleteUserProgramProgress = /* GraphQL */ `
       username
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6657,17 +3471,11 @@ export const createVideoExercise = /* GraphQL */ `
         title
         description
         duration
-        Exercises {
-          nextToken
-          startedAt
-        }
         VideoUrl
         thumbnailUrl
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -6683,65 +3491,14 @@ export const createVideoExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6759,17 +3516,11 @@ export const updateVideoExercise = /* GraphQL */ `
         title
         description
         duration
-        Exercises {
-          nextToken
-          startedAt
-        }
         VideoUrl
         thumbnailUrl
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -6785,65 +3536,14 @@ export const updateVideoExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6861,17 +3561,11 @@ export const deleteVideoExercise = /* GraphQL */ `
         title
         description
         duration
-        Exercises {
-          nextToken
-          startedAt
-        }
         VideoUrl
         thumbnailUrl
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -6887,65 +3581,14 @@ export const deleteVideoExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -6967,31 +3610,9 @@ export const createTrainingTypeExercise = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -7007,65 +3628,14 @@ export const createTrainingTypeExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -7087,31 +3657,9 @@ export const updateTrainingTypeExercise = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -7127,65 +3675,14 @@ export const updateTrainingTypeExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -7207,31 +3704,9 @@ export const deleteTrainingTypeExercise = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -7247,65 +3722,14 @@ export const deleteTrainingTypeExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -7327,31 +3751,9 @@ export const createUserGoalTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       user {
         id
@@ -7369,33 +3771,13 @@ export const createUserGoalTrainingTypes = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -7417,31 +3799,9 @@ export const updateUserGoalTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       user {
         id
@@ -7459,33 +3819,13 @@ export const updateUserGoalTrainingTypes = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -7507,31 +3847,9 @@ export const deleteUserGoalTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       user {
         id
@@ -7549,33 +3867,13 @@ export const deleteUserGoalTrainingTypes = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -7597,31 +3895,9 @@ export const createWorkoutTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       workout {
         id
@@ -7637,91 +3913,15 @@ export const createWorkoutTrainingTypes = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -7743,31 +3943,9 @@ export const updateWorkoutTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       workout {
         id
@@ -7783,91 +3961,15 @@ export const updateWorkoutTrainingTypes = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -7889,31 +3991,9 @@ export const deleteWorkoutTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       workout {
         id
@@ -7929,91 +4009,15 @@ export const deleteWorkoutTrainingTypes = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -8035,31 +4039,9 @@ export const createProgramTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       program {
         id
@@ -8070,29 +4052,13 @@ export const createProgramTrainingTypes = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -8114,31 +4080,9 @@ export const updateProgramTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       program {
         id
@@ -8149,29 +4093,13 @@ export const updateProgramTrainingTypes = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -8193,31 +4121,9 @@ export const deleteProgramTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       program {
         id
@@ -8228,29 +4134,13 @@ export const deleteProgramTrainingTypes = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -8272,31 +4162,9 @@ export const createChallengeTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       challenge {
         id
@@ -8307,64 +4175,14 @@ export const createChallengeTrainingTypes = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -8386,31 +4204,9 @@ export const updateChallengeTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       challenge {
         id
@@ -8421,64 +4217,14 @@ export const updateChallengeTrainingTypes = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -8500,31 +4246,9 @@ export const deleteChallengeTrainingTypes = /* GraphQL */ `
         imageUrl
         onboardingImageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       challenge {
         id
@@ -8535,64 +4259,14 @@ export const deleteChallengeTrainingTypes = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -8611,31 +4285,9 @@ export const createMuscleGroupExercise = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -8651,65 +4303,14 @@ export const createMuscleGroupExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -8728,31 +4329,9 @@ export const updateMuscleGroupExercise = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -8768,65 +4347,14 @@ export const updateMuscleGroupExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -8845,31 +4373,9 @@ export const deleteMuscleGroupExercise = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -8885,65 +4391,14 @@ export const deleteMuscleGroupExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -8962,31 +4417,9 @@ export const createUserGoalMuscleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       user {
         id
@@ -9004,33 +4437,13 @@ export const createUserGoalMuscleGroups = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -9049,31 +4462,9 @@ export const updateUserGoalMuscleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       user {
         id
@@ -9091,33 +4482,13 @@ export const updateUserGoalMuscleGroups = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -9136,31 +4507,9 @@ export const deleteUserGoalMuscleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       user {
         id
@@ -9178,33 +4527,13 @@ export const deleteUserGoalMuscleGroups = /* GraphQL */ `
         imageUrl
         age
         userType
-        goalTrainingTypes {
-          nextToken
-          startedAt
-        }
-        goalMuscleGroups {
-          nextToken
-          startedAt
-        }
-        recipes {
-          nextToken
-          startedAt
-        }
-        DietRecipeProgresses {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -9223,31 +4552,9 @@ export const createWorkoutMusleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       workout {
         id
@@ -9263,91 +4570,15 @@ export const createWorkoutMusleGroups = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -9366,31 +4597,9 @@ export const updateWorkoutMusleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       workout {
         id
@@ -9406,91 +4615,15 @@ export const updateWorkoutMusleGroups = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -9509,31 +4642,9 @@ export const deleteWorkoutMusleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       workout {
         id
@@ -9549,91 +4660,15 @@ export const deleteWorkoutMusleGroups = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -9652,31 +4687,9 @@ export const createProgramMuscleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       program {
         id
@@ -9687,29 +4700,13 @@ export const createProgramMuscleGroups = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -9728,31 +4725,9 @@ export const updateProgramMuscleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       program {
         id
@@ -9763,29 +4738,13 @@ export const updateProgramMuscleGroups = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -9804,31 +4763,9 @@ export const deleteProgramMuscleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       program {
         id
@@ -9839,29 +4776,13 @@ export const deleteProgramMuscleGroups = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -9880,31 +4801,9 @@ export const createChallengeMuscleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       challenge {
         id
@@ -9915,64 +4814,14 @@ export const createChallengeMuscleGroups = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -9991,31 +4840,9 @@ export const updateChallengeMuscleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       challenge {
         id
@@ -10026,64 +4853,14 @@ export const updateChallengeMuscleGroups = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -10102,31 +4879,9 @@ export const deleteChallengeMuscleGroups = /* GraphQL */ `
         backgroundColor
         specialBackgroundColor
         imageUrl
-        exercises {
-          nextToken
-          startedAt
-        }
-        users {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       challenge {
         id
@@ -10137,64 +4892,14 @@ export const deleteChallengeMuscleGroups = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -10212,15 +4917,9 @@ export const createEquipmentExercise = /* GraphQL */ `
         name
         imageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -10236,65 +4935,14 @@ export const createEquipmentExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -10312,15 +4960,9 @@ export const updateEquipmentExercise = /* GraphQL */ `
         name
         imageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -10336,65 +4978,14 @@ export const updateEquipmentExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -10412,15 +5003,9 @@ export const deleteEquipmentExercise = /* GraphQL */ `
         name
         imageUrl
         backgroundColor
-        exercises {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       exercise {
         id
@@ -10436,65 +5021,14 @@ export const deleteEquipmentExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -10521,78 +5055,21 @@ export const createTagExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       tag {
         id
         label
-        exercises {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -10619,78 +5096,21 @@ export const updateTagExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       tag {
         id
         label
-        exercises {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -10717,78 +5137,21 @@ export const deleteTagExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       tag {
         id
         label
-        exercises {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -10815,59 +5178,10 @@ export const createChallengeExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       challenge {
         id
@@ -10878,64 +5192,14 @@ export const createChallengeExercise = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -10962,59 +5226,10 @@ export const updateChallengeExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       challenge {
         id
@@ -11025,64 +5240,14 @@ export const updateChallengeExercise = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -11109,59 +5274,10 @@ export const deleteChallengeExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       challenge {
         id
@@ -11172,64 +5288,14 @@ export const deleteChallengeExercise = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -11256,59 +5322,10 @@ export const createWorkoutExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       workout {
         id
@@ -11324,91 +5341,15 @@ export const createWorkoutExercise = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -11435,59 +5376,10 @@ export const updateWorkoutExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       workout {
         id
@@ -11503,91 +5395,15 @@ export const updateWorkoutExercise = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -11614,59 +5430,10 @@ export const deleteWorkoutExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       workout {
         id
@@ -11682,91 +5449,15 @@ export const deleteWorkoutExercise = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -11793,112 +5484,25 @@ export const createCoachExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       coach {
         id
         username
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         backgroundImageUrl
         presentationVideoUrl
         bio
-        exercises {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         coachUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -11925,112 +5529,25 @@ export const updateCoachExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       coach {
         id
         username
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         backgroundImageUrl
         presentationVideoUrl
         bio
-        exercises {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         coachUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -12057,112 +5574,25 @@ export const deleteCoachExercise = /* GraphQL */ `
         level
         exerciseExtension1
         exerciseExtension2
-        exerciseItem {
-          id
-          sets
-          workoutTime
-          restTime
-          order
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-          workoutExerciseItemsId
-          challengeExerciseItemsId
-          exerciseItemExerciseId
-        }
-        tags {
-          nextToken
-          startedAt
-        }
-        videos {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        trainingtypes {
-          nextToken
-          startedAt
-        }
-        musclegroups {
-          nextToken
-          startedAt
-        }
-        equipments {
-          nextToken
-          startedAt
-        }
-        coachs {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         exerciseExerciseItemId
+        __typename
       }
       coach {
         id
         username
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         backgroundImageUrl
         presentationVideoUrl
         bio
-        exercises {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         coachUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -12178,49 +5608,13 @@ export const createCoachWorkouts = /* GraphQL */ `
       coach {
         id
         username
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         backgroundImageUrl
         presentationVideoUrl
         bio
-        exercises {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         coachUserId
+        __typename
       }
       workout {
         id
@@ -12236,91 +5630,15 @@ export const createCoachWorkouts = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -12336,49 +5654,13 @@ export const updateCoachWorkouts = /* GraphQL */ `
       coach {
         id
         username
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         backgroundImageUrl
         presentationVideoUrl
         bio
-        exercises {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         coachUserId
+        __typename
       }
       workout {
         id
@@ -12394,91 +5676,15 @@ export const updateCoachWorkouts = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -12494,49 +5700,13 @@ export const deleteCoachWorkouts = /* GraphQL */ `
       coach {
         id
         username
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         backgroundImageUrl
         presentationVideoUrl
         bio
-        exercises {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         coachUserId
+        __typename
       }
       workout {
         id
@@ -12552,91 +5722,15 @@ export const deleteCoachWorkouts = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -12652,49 +5746,13 @@ export const createCoachChallenges = /* GraphQL */ `
       coach {
         id
         username
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         backgroundImageUrl
         presentationVideoUrl
         bio
-        exercises {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         coachUserId
+        __typename
       }
       challenge {
         id
@@ -12705,64 +5763,14 @@ export const createCoachChallenges = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -12778,49 +5786,13 @@ export const updateCoachChallenges = /* GraphQL */ `
       coach {
         id
         username
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         backgroundImageUrl
         presentationVideoUrl
         bio
-        exercises {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         coachUserId
+        __typename
       }
       challenge {
         id
@@ -12831,64 +5803,14 @@ export const updateCoachChallenges = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -12904,49 +5826,13 @@ export const deleteCoachChallenges = /* GraphQL */ `
       coach {
         id
         username
-        user {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         backgroundImageUrl
         presentationVideoUrl
         bio
-        exercises {
-          nextToken
-          startedAt
-        }
-        workouts {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         coachUserId
+        __typename
       }
       challenge {
         id
@@ -12957,64 +5843,14 @@ export const deleteCoachChallenges = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -13036,23 +5872,9 @@ export const createProgramWorkouts = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       workout {
         id
@@ -13068,91 +5890,15 @@ export const createProgramWorkouts = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -13174,23 +5920,9 @@ export const updateProgramWorkouts = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       workout {
         id
@@ -13206,91 +5938,15 @@ export const updateProgramWorkouts = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -13312,23 +5968,9 @@ export const deleteProgramWorkouts = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+        __typename
       }
       workout {
         id
@@ -13344,91 +5986,15 @@ export const deleteProgramWorkouts = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -13455,85 +6021,11 @@ export const createChallengeWorkouts = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       challenge {
         id
@@ -13544,64 +6036,14 @@ export const createChallengeWorkouts = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -13628,85 +6070,11 @@ export const updateChallengeWorkouts = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       challenge {
         id
@@ -13717,64 +6085,14 @@ export const updateChallengeWorkouts = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
@@ -13801,85 +6119,11 @@ export const deleteChallengeWorkouts = /* GraphQL */ `
         level
         equipment
         calories
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        programs {
-          nextToken
-          startedAt
-        }
-        challenges {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        properties {
-          nextToken
-          startedAt
-        }
-        category {
-          id
-          name
-          imageUrl
-          headerImageUrl
-          description
-          backgroundColor
-          isFavorite
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
-        userWorkoutProgress {
-          nextToken
-          startedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         categoryWorkoutsId
         workoutAuthorUserId
+        __typename
       }
       challenge {
         id
@@ -13890,64 +6134,14 @@ export const deleteChallengeWorkouts = /* GraphQL */ `
         description
         duration
         level
-        workouts {
-          nextToken
-          startedAt
-        }
-        exerciseItems {
-          nextToken
-          startedAt
-        }
-        exercises {
-          nextToken
-          startedAt
-        }
-        muscleGroups {
-          nextToken
-          startedAt
-        }
-        trainingTypes {
-          nextToken
-          startedAt
-        }
-        authorCoach {
-          nextToken
-          startedAt
-        }
-        authorUser {
-          id
-          username
-          givenName
-          displayName
-          surname
-          gender
-          mail
-          mobile
-          weight
-          height
-          backgroundColor
-          specialBackgroundColor
-          imageUrl
-          age
-          userType
-          createdAt
-          updatedAt
-          _version
-          _deleted
-          _lastChangedAt
-        }
         createdAt
         updatedAt
-        _version
-        _deleted
-        _lastChangedAt
         challengeAuthorUserId
+        __typename
       }
       createdAt
       updatedAt
-      _version
-      _deleted
-      _lastChangedAt
+      __typename
     }
   }
 `;
