@@ -62,8 +62,9 @@ const CustomDrawerContent = ({ navigation }) => {
     const [user, setUser] = React.useState({});
     const signOut = async () => {
         try {
+            console.log("This is being invoked somehowwww")
             await Auth.signOut();
-            navigation.replace('OnBoarding');
+            navigation.navigate('Splash');
         } catch (error) {
             console.log(error);
         }

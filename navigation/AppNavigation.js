@@ -63,6 +63,8 @@ export function AppNavigation() {
                 <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
                 <Stack.Screen name="ResetPassword" component={ResetPassword} />
 
+                <Stack.Screen name="MainScreen" component={MainScreen} />
+
                
 
                 <Stack.Screen name="MyAccount" component={MyAccount} />
